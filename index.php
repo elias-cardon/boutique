@@ -6,11 +6,11 @@
 </head>
 <body>
 	<header>
-		<?php include("src/include/header.php") ?>
+		<?php include("include/header.php") ?>
 	</header>
 
 	<footer>
-    <?php include("src/include/footer.php") ?>
+    <?php include("include/footer.php") ?>
 </footer>
 </body>
 </html>
