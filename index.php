@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>La Bonne Planque</title>
 	<link rel="stylesheet" type="text/css" href="src/css/style.css">
 </head>
 <body>
 	<header>
-		<?php include("include/header.php") ?>
+		
 	</header>
-
+	<main>
+		
+	</main>
 	<footer>
-    <?php include("include/footer.php") ?>
-</footer>
+		
+	</footer>
 </body>
+<script src="script.js"></script>
 </html>
