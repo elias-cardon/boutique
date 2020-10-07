@@ -284,7 +284,7 @@
             <!-- Grid column -->
             <div class="col-xl-7 pb-2">
 
-                <p class="card-text">L’assurance La Bonne Planque couvre les problèmes de livraison sur les paquets Colissimo et
+                <p class="card-text">L’assurance La Bonne Planque couvre les problèmes de livraison sur les paquets "Colissimo" et
                     "UPS".<br/><br/>
 
 
