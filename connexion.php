@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     $login = htmlspecialchars($_POST['login']);
     $password = htmlspecialchars($_POST['password']);
     if ($login && $password) {
-        $connect = new PDO('mysql:host=localhost;dbname=forum;charset=utf8', 'root', '');
+        $connect = new PDO('mysql:host=localhost;dbname=boutique;charset=utf8', 'root', '');
 
         $log = $connect->prepare("SELECT * FROM utilisateurs WHERE login = ?");
         $log->execute(array($login));
@@ -37,10 +37,10 @@ if (isset($_POST['submit'])) {
     <script src="https://kit.fontawesome.com/5a25ce672a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="favicon/gamepad.png" type="image/x-icon">
 </head>
-<body class="color">
+<body>
 <!-- Header -->
-<header id="header">
-    <?php include("include/header.php") ?>
+<header>
+
 </header>
 <!-- Main -->
 <main>

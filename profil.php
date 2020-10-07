@@ -21,11 +21,11 @@ if (isset($_POST["deconnexion"])) {
 </head>
 <body>
 <!-- Header -->
-<header id="header">
-    <?php include("include/header.php") ?>
+<header>
+
 </header>
 <!-- Main -->
-<main id="milieu">
+<main>
     <?php
     if ($_SESSION['login']) {
         echo "<div class='center_pProfil'> <p>Bienvenue " . $_SESSION['login'] . " ! <br/><br/>
@@ -42,7 +42,7 @@ if (isset($_POST["deconnexion"])) {
 </main>
 <!-- Footer -->
 <footer>
-    <?php include("include/footer.php") ?>
+
 </footer>
 </body>
 </html>
