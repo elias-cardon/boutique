@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
             $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 15));
 
             $db = mysqli_connect('localhost', 'root', '') or die('Erreur');
-            mysqli_select_db($db, 'forum');
+            mysqli_select_db($db, 'boutique');
 
             //VERIFIER SI LE LOGIN EXISTE DEJA
             $request = " SELECT login FROM utilisateurs WHERE login = '" . $_POST['login'] . "' ";
@@ -47,10 +47,10 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" type="text/css" href="src/css/inscription.css">
     <link rel="shortcut icon" href="favicon/gamepad.png" type="image/x-icon">
 </head>
-<body class="color">
+<body>
 <!-- Header -->
-<header id="header">
-    <?php include("include/header.php") ?>
+<header>
+
 </header>
 <!-- Main -->
 <main>

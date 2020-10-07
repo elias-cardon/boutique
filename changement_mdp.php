@@ -20,7 +20,7 @@ if (isset($_SESSION['login'])) {
         if ($password && $newpassword && $repeatnewpassword) {
             if ($newpassword == $repeatnewpassword) {
                 $db = mysqli_connect('localhost', 'root', '') or die('Erreur');
-                mysqli_select_db($db, 'forum');
+                mysqli_select_db($db, 'boutique');
                 $query = mysqli_query($db, "SELECT * FROM utilisateurs WHERE login = '$username' AND password = '$password'");
                 $rows = mysqli_num_rows($query);
                 if ($rows == 1) {
@@ -59,7 +59,7 @@ if (isset($_SESSION['login'])) {
 <body>
 <!-- Header -->
 <header>
-    <?php include("include/header.php") ?>
+    
 </header>
 <!-- Main -->
 <main>
