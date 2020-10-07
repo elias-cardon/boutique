@@ -21,7 +21,7 @@
                         <a href="livraison.php">Livraisons</a>
                     </li>
                     <li>
-                        <a href="#!">Conditions générales d'utilisation</a>
+                        <a href="CGU.php">Conditions générales d'utilisation</a>
                     </li>
                     <li>
                         <a href="#!">Nos engagements</a>
