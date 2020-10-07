@@ -15,10 +15,10 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">A propos de La Bonne Planque</a>
+                        <a href="propos.php">A propos de La Bonne Planque</a>
                     </li>
                     <li>
-                        <a href="#!">Livraisons</a>
+                        <a href="livraison.php">Livraisons</a>
                     </li>
                     <li>
                         <a href="#!">Conditions générales d'utilisation</a>
