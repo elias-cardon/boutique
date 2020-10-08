@@ -67,7 +67,7 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Contactez-nous</a>
+                        <a href="contact.php">Contactez-nous</a>
                     </li>
                 </ul>
 
