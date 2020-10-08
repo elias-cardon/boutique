@@ -24,7 +24,7 @@
                         <a href="CGU.php">Conditions générales d'utilisation</a>
                     </li>
                     <li>
-                        <a href="#!">Nos engagements</a>
+                        <a href="engagement.php">Nos engagements</a>
                     </li>
                     <li>
                         <a href="faq.php">FAQ</a>
