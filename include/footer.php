@@ -17,7 +17,7 @@
     <section class="footer-item">
       <h3>Explore</h3>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Accueil</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Capabilities</a></li>
           <li><a href="#">Careers</a></li>
