@@ -31,27 +31,27 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" type="text/css" href="src/css/connexion.css">
-    <link rel="stylesheet" type="text/css" href="src/css/index.css">
-    <script src="https://kit.fontawesome.com/5a25ce672a.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="favicon/gamepad.png" type="image/x-icon">
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="src/css/style.css"> -->
 </head>
 <body>
-<!-- Header -->
 <header>
-
+    <?php
+    require_once('include/header.php');
+    ?>
 </header>
-<!-- Main -->
 <main>
-    <h1>Connexion</h1>
-    <form method="post" action="connexion.php">
-        <p>Login</p>
-        <input class="input" type="text" name="login">
-        <p>Mot de passe</p>
-        <input class="input" type="password" name="password"><br/><br/>
-        <input class="input" id="connexionSubmit" type="submit" name="submit" value="Valider"><br/>
-    </form>
+    
 </main>
+<footer>
+    <?php
+    require_once('include/footer.php');
+    ?>
+</footer>
 </body>
+<script src="script.js"></script>
 </html>
