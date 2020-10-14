@@ -59,10 +59,6 @@
           <li><a href="#">Privacy</a></li>
         </ul>
     </section>
-            
-    <section class="footer-item">
-        <a href="#" class="footer-button">Next: About</a>
-    </section>
   </nav>
 </footer>
 <!-- Footer -->

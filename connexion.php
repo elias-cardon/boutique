@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    <!-- <link rel="stylesheet" type="text/css" href="src/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
 </head>
 <body>
 <header>
@@ -45,7 +45,13 @@ if (isset($_POST['submit'])) {
     ?>
 </header>
 <main>
-    
+    <form method="post" action="connexion.php">
+        <p>Login</p>
+        <input class="input" type="text" name="login">
+        <p>Mot de passe</p>
+        <input class="input" type="password" name="password"><br/><br/>
+        <input class="input" id="connexionSubmit" type="submit" name="submit" value="Valider"><br/>
+    </form>
 </main>
 <footer>
     <?php
