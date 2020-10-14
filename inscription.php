@@ -7,7 +7,7 @@
 
 
 
-    <!-- <link rel="stylesheet" type="text/css" href="src/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
 </head>
 <body>
 <header>

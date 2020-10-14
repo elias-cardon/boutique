@@ -28,3 +28,6 @@ function navLinkClick() {
     navToggler.click();
   }
 }
+
+
+// INSCRIPTION
