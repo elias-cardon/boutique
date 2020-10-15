@@ -19,20 +19,23 @@
                         <li><a href="boutique.php">Boutique</a></li>
                         <li><a href="panier.php">Panier</a></li>
                         <?php
+                        session_name('header');
                         session_start();
-                        $pageSelected = 'profil';
-                        if (!isset($_SESSION['login']) ) {?>
+                        if (!isset($_SESSION['login'])) { ?>
                             <li><a href="inscription.php">Inscription</a></li>
-                        <li><a href="connexion.php">Connexion</a></li>
-                        <?php
+                            <li><a href="connexion.php">Connexion</a></li>
+                            <?php
                         }
                         ?>
                         <?php
-                        if (isset($_SESSION['login'])){?>
+                        $pageSelected = 'profil';
+                        if (isset($_SESSION['login'])) {
+                            ?>
                             <li><a href="profil.php">Profil</a></li>
-                        <li><a href="logout.php">Déconnexion</a></li>
-                        <?php
+                            <li><a href="logout.php">Déconnexion</a></li>
+                            <?php
                         }
+                        session_write_close();
                         ?>
 
                     </ul>

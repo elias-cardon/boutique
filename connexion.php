@@ -1,4 +1,6 @@
 <?php
+session_name('connexion');
+session_start();
 if (isset($_POST['submit'])) {
     $login = htmlspecialchars($_POST['login']);
     $password = htmlspecialchars($_POST['password']);
@@ -24,6 +26,7 @@ if (isset($_POST['submit'])) {
         echo "Veuillez saisir tous les champs.";
     }
 }
+session_write_close();
 ?>
 
 <!DOCTYPE html>
