@@ -26,7 +26,7 @@
           
     <section class="footer-item">
       <h3>Notre adresse</h3>
-        <!-- <a href="#"> -->
+        <a href="#">
         <p>La Bonne Planque</p>
         <p>8 rue d'Hozier</p>
         <p>13002 Marseille, France</p>
