@@ -28,13 +28,13 @@ if (isset($_POST["deconnexion"])) {
 <main id="milieu">
     <?php
     if ($_SESSION['login']) {
-        echo "<div class='center_pProfil'> <p>Bienvenue " . $_SESSION['login'] . " ! <br/><br/>
+        echo " <p>Bienvenue " . $_SESSION['login'] . " ! <br/><br/>
 
 					<a href='changement_mdp.php'>Changer de mot de passe</a><br/>
 
 					<a href='changement_login.php'>Changer de login</a><br/>
 
-					<a href='logout.php'>Se déconnecter</a></p></div>";
+					<a href='logout.php'>Se déconnecter</a></p>";
     } else {
         header("Location:connexion.php");
     }
