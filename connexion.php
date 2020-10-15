@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_POST['submit'])) {
     $login = htmlspecialchars($_POST['login']);
     $password = htmlspecialchars($_POST['password']);

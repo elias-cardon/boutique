@@ -1,6 +1,5 @@
 <?php
 //SECURE PASSWORD N VERIF IF LOGIN ALREADY EXIST
-session_start();
 if (isset($_POST['submit'])) {
     $login = htmlentities(trim($_POST['login']));
     $nom = htmlentities(trim($_POST['nom']));
