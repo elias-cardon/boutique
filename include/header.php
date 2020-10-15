@@ -18,8 +18,23 @@
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="boutique.php">Boutique</a></li>
                         <li><a href="panier.php">Panier</a></li>
-                        <li><a href="inscription.php">Inscription</a></li>
+                        <?php
+                        session_start();
+                        $pageSelected = 'profil';
+                        if (!isset($_SESSION['login']) ) {?>
+                            <li><a href="inscription.php">Inscription</a></li>
                         <li><a href="connexion.php">Connexion</a></li>
+                        <?php
+                        }
+                        ?>
+                        <?php
+                        if (isset($_SESSION['login'])){?>
+                            <li><a href="profil.php">Profil</a></li>
+                        <li><a href="logout.php">Déconnexion</a></li>
+                        <?php
+                        }
+                        ?>
+
                     </ul>
 
                     <!-- nav-toggler for mobile version only -->
