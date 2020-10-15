@@ -15,7 +15,6 @@ if (isset($_POST["deconnexion"])) {
 <head>
     <meta charset="utf-8">
     <title>Profil</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="src/css/index.css">
     <script src="https://kit.fontawesome.com/5a25ce672a.js" crossorigin="anonymous"></script>
 </head>
