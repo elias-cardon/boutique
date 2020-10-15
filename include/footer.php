@@ -18,8 +18,8 @@
       <h3>Explore</h3>
         <ul>
           <li><a href="index.php">Accueil</a></li>
-          <li><a href="propos">A propos de nous</a></li>
-          <li><a href="engagements">Nos engagements</a></li>
+          <li><a href="propos.php">A propos de nous</a></li>
+          <li><a href="engagement.php">Nos engagements</a></li>
           <!-- <li><a href="#">Careers</a></li> -->
         </ul>
     </section>
