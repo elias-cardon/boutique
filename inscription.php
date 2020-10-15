@@ -3,11 +3,13 @@
 session_start();
 if (isset($_POST['submit'])) {
     $login = htmlentities(trim($_POST['login']));
+    $nom = htmlentities(trim($_POST['nom']));
+    $prenom = htmlentities(trim($_POST['prenom']));
     $email = htmlentities(trim($_POST['email']));
     $password = htmlentities(trim($_POST['password']));
     $repeatpassword = htmlentities(trim($_POST['repeatpassword']));
 
-    if ($login && $email && $password && $repeatpassword) {
+    if ($login && $email && $nom && $prenom && $password && $repeatpassword) {
         if ($password == $repeatpassword) {
             //CRYPTAGE MDP
             $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 15));
@@ -24,7 +26,7 @@ if (isset($_POST['submit'])) {
             {
             echo "Cet email existe déjà ! Veuillez en choisir un autre.";
             }else{
-                $query = mysqli_query($db, "INSERT INTO utilisateurs (login, email, password) VALUES('$login', '$email', '$password');");
+                $query = mysqli_query($db, "INSERT INTO utilisateurs (login, prenom, nom,  email, password, admin) VALUES('$login', '$prenom', '$nom', '$email', '$password','1');");
 
                 die("Inscription terminée. <a href='connexion.php'>Connectez-vous</a>.");
             }
@@ -44,9 +46,6 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-
-
-
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
 </head>
 <body>
@@ -59,9 +58,13 @@ if (isset($_POST['submit'])) {
 	<form method="post" action="inscription.php">
         <p>Login</p>
         <input class="input" type="text" name="login">
+        <p>Votre prénom</p>
+        <input class="input" type="text" name="prenom">
+        <p>Votre nom</p>
+        <input class="input" type="text" name="nom">
         <p>Votre email</p>
         <input class="input" type="text" name="email">
-        <p>Mot de passe</p>
+        <p>Votre mot de passe</p>
         <input class="input" type="password" name="password">
         <p>Répétez votre mot de passe</p>
         <input class="input" type="password" name="repeatpassword"><br><br>
