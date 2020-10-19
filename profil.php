@@ -20,11 +20,11 @@ if (isset($_POST["deconnexion"])) {
 </head>
 <body>
 <!-- Header -->
-<header id="header">
+<header>
     <?php include("include/header.php") ?>
 </header>
 <!-- Main -->
-<main id="milieu">
+<main>
     <?php
     if ($_SESSION['login']) {
         echo " <p>Bienvenue " . $_SESSION['login'] . " ! <br/><br/>
