@@ -7,7 +7,6 @@
 
 
 <?php 
-session_start();
 
 include 'src/php/Base.php';
 

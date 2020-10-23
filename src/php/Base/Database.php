@@ -1,5 +1,4 @@
 <?php
-session_start();
 namespace Base;
 
 class Database 

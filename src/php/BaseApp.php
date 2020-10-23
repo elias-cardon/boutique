@@ -1,5 +1,4 @@
 <?php 
-session_start();
 class BaseApp 
 {
     public function _load($class)
