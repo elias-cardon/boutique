@@ -1,4 +1,5 @@
 <?php 
+session_start();
 namespace Base;
 
 class User extends Database
