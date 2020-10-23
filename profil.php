@@ -31,9 +31,7 @@ if (isset($_POST["deconnexion"])) {
 
 					<a href='changement_mdp.php'>Changer de mot de passe</a><br/>
 
-					<a href='changement_login.php'>Changer de login</a><br/>
-
-					<a href='logout.php'>Se déconnecter</a></p>";
+					<a href='changement_login.php'>Changer de login</a>";
     } else {
         header("Location:connexion.php");
     }
