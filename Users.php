@@ -1,3 +1,8 @@
+<header>
+    <?php
+    require_once('include/header.php');
+    ?>
+</header>
 <link rel="stylesheet" type="text/css" href="src/css/Users.css">
 
 
@@ -30,3 +35,9 @@ $users = new Base\User();
 
 </tbody>
 </table>
+
+<footer>
+    <?php
+    require_once('include/footer.php');
+    ?>
+</footer>
