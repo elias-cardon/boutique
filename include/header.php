@@ -11,7 +11,7 @@
             <div class="container">
                 <nav class="site-navbar">
                     <!-- site logo -->
-                    <a href="#home" class="site-logo">La Bonne Planque</a>
+                    <a href="index.php" class="site-logo">La Bonne Planque</a>
 
                     <!-- site menu/nav -->
                     <ul>
