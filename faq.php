@@ -17,7 +17,7 @@
         <!--Section: Content-->
         <section>
 
-            <h2 class="font-weight-normal text-uppercase font-small grey-text mb-4 text-center">FAQ</h2>
+            <h2 class="font-weight-normal text-uppercase font-small grey-text mb-4 text-center text-info">FAQ</h2>
             <!-- Section heading -->
             <!-- <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">Frequently Asked Questions</h3> -->
             <hr class="w-header">

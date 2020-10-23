@@ -15,7 +15,7 @@
     <div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
 
         <!-- Title -->
-        <h2 class="card-title h2">Conditions générales d'utilisation</h2>
+        <h2 class="card-title h2 text-info text-info">Conditions générales d'utilisation</h2>
 
         <!-- Subtitle -->
         <p class="my-4 h6">Les articles en vente sur La Bonne Planque</p>

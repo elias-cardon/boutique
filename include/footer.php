@@ -20,7 +20,7 @@
           <li><a href="index.php">Accueil</a></li>
           <li><a href="propos.php">A propos de nous</a></li>
           <li><a href="engagement.php">Nos engagements</a></li>
-          <!-- <li><a href="#">Careers</a></li> -->
+          <li><a href="livraison.php">Livraisons</a></li>
         </ul>
     </section>
           
