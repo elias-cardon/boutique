@@ -26,7 +26,7 @@
             <!-- Grid column -->
             <div class="col-xl-7 pb-2">
 
-                <p class="card-text">Tous les articles vendus sur Candysan sont des articles originaux achetés et
+                <p class="card-text">Tous les articles vendus sur La Bonne Planque sont des articles originaux achetés et
                     expédiés depuis Nos locaux à Marseille. Tous les produits sont destinés au marché français et
                     respectent les normes et la législation en vigueur en France. Dans la grande majorité des cas les
                     informations et conseils d'utilisation inscrits sur les emballages sont en français uniquement.</p>
