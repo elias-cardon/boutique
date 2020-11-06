@@ -5,48 +5,8 @@
 </head>
 <body>
 <header>
-    <header class="header-area">
-        <!-- site-navbar start -->
-        <div class="navbar-area">
-            <div class="container">
-                <nav class="site-navbar">
-                    <!-- site logo -->
-                    <a href="index.php" class="site-logo">La Bonne Planque</a>
+    <header>
 
-                    <!-- site menu/nav -->
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="boutique.php">Boutique</a></li>
-                        <li><a href="panier.php">Panier</a></li>
-                        <?php
-                        session_name('header');
-                        session_start();
-                        if (!isset($_SESSION['login'])) { ?>
-                            <li><a href="inscription.php">Inscription</a></li>
-                            <li><a href="connexion.php">Connexion</a></li>
-                            <?php
-                        }
-                        ?>
-                        <?php
-                        $pageSelected = 'profil';
-                        if (isset($_SESSION['login'])) {
-                            ?>
-                            <li><a href="profil.php">Profil</a></li>
-                            <li><a href="logout.php">Déconnexion</a></li>
-                            <?php
-                        }
-                        session_write_close();
-                        ?>
-
-                    </ul>
-
-                    <!-- nav-toggler for mobile version only -->
-                    <button class="nav-toggler">
-                        <span></span>
-                    </button>
-                </nav>
-            </div>
-        </div><!-- navbar-area end -->
     </header>
 
 
