@@ -11,9 +11,7 @@
 </head>
 <body>
 <header>
-    <?php
-    require_once('include/header.php');
-    ?>
+    
 </header>
 <main>
 	
