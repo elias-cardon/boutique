@@ -101,7 +101,7 @@
 			$login = Session::get('utilisateurs_login');
 			if ($login == true) {
 		?>
-			<a href="?csid=<?php echo Session::get('utilisateurs_id'); ?>">Logout</a>
+			<a href="?utilisateurs_id=<?php echo Session::get('utilisateurs_id'); ?>">Logout</a>
 
 		<?php }else{  ?>
 			<a href="login.php">Login</a>
@@ -131,7 +131,7 @@
 	 	<?php 
 	 	$chkCart = $ct->checkCartTable();
 	 	if ($chkCart) { ?>
-	 		<li><a href="cart.php">Cart</a></li>
+	 		<li><a href="panier.php">Cart</a></li>
 	 		<li><a href="payment.php">Payment</a></li>
 	 	<?php } ?>
 	  

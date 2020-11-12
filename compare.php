@@ -21,7 +21,7 @@
 								<th>Action</th>
 							</tr>
 					    <?php
-					    	$csid = Session::get('csid');
+					    	$csid = Session::get('utilisateurs_id');
 							$getProd = $pd->getComparedData($csid);
 							if ($getProd) {
 								$i = 1;
@@ -29,8 +29,8 @@
 					   	?>
 							<tr>
 								<td><?php echo $i?></td>
-								<td><?php echo $cartpd['productName'];?></td>
-								<td>$ <?php echo $cartpd['price'];?></td>
+								<td><?php echo $cartpd['produit_nom'];?></td>
+								<td>$ <?php echo $cartpd['prix'];?></td>
 								<td><img src="admin/<?php echo $cartpd['image'];?>" alt=""/></td>
 								<td><a href="details.php?pdid=<?php echo $cartpd['productId'];?>">View</a></td>
 		
