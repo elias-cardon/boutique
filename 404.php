@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <style>
 .errpage{
@@ -22,5 +22,5 @@
 </div>
 
  <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>
