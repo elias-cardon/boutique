@@ -90,18 +90,18 @@
 						</div>
 			      </div>
 	<?php
-		if (isset($_GET['csid'])) {
+		if (isset($_GET['utilisateurs_id'])) {
 			$delCart = $ct->delCustomerCart();
-			$delCompare = $pd->delCustomerCompare(Session::get('csid'));
+			$delCompare = $pd->delCustomerCompare(Session::get('utilisateurs_id'));
 			Session::destroy();
 		}
 	?>
 		   <div class="login">
 		<?php
-			$login = Session::get('cslogin');
+			$login = Session::get('utilisateurs_login');
 			if ($login == true) {
 		?>
-			<a href="?csid=<?php echo Session::get('csid'); ?>">Logout</a>
+			<a href="?csid=<?php echo Session::get('utilisateurs_id'); ?>">Logout</a>
 
 		<?php }else{  ?>
 			<a href="login.php">Login</a>
@@ -117,13 +117,13 @@
 	  <li><a href="index.php">Home</a></li>
 	 <!--  <li><a href="topbrands.php">Top Brands</a></li> -->
 	   <?php
-	  	$ckCompare = $pd->checkCompareData(Session::get('csid'));
+	  	$ckCompare = $pd->checkCompareData(Session::get('utilisateurs_id'));
 	 	if ($ckCompare) { ?>
 		    <li><a href="compare.php">Compare</a></li>
 	 	<?php } ?>
 
 	 	 <?php
-	  	$ckwlist = $pd->checkWishlistData(Session::get('csid'));
+	  	$ckwlist = $pd->checkWishlistData(Session::get('utilisateurs_id'));
 	 	if ($ckwlist) { ?>
 		    <li><a href="wishlist.php">Wishlist</a></li>
 	 	<?php } ?>
@@ -136,14 +136,14 @@
 	 	<?php } ?>
 	  
 	  <?php 
-	  	$csid = Session::get('csid');
-	 	$ckorder = $csmr->checkOrder($csid);
+	  	$utilisateurs_id = Session::get('utilisateurs_id');
+	 	$ckorder = $csmr->checkOrder($utilisateurs_id);
 	 	if ($ckorder) { ?>
 	 		<li><a href="orderdetails.php">Order</a></li>
 	 	<?php } ?>
 
 	  <?php
-	  	$userlogin = Session::get('cslogin');
+	  	$userlogin = Session::get('utilisateurs_login');
 	  	if ($userlogin == true) { ?>
 	  	<li><a href="profile.php">Profile</a></li>
 	  <?php	} ?>
