@@ -33,7 +33,7 @@ class Adminlogin
 			$lgmsg = "Username or Password must not be empty !";
 			return $lgmsg;
 		}else{
-			$sql = "SELECT * FROM admin WHERE ad_user='{$uname}' AND ad_pass='{$pass}'";
+			$sql = "SELECT * FROM tbl_admin WHERE ad_user='{$uname}' AND ad_pass='{$pass}'";
 			$result = $this->db->select($sql);
 			
 			if($result){

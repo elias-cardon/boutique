@@ -1,6 +1,4 @@
-<?php
-	require_once("include/header.php");
-?>
+
 <?php
 	$login = Session::get('cslogin');
 	if ($login == true) {

@@ -23,19 +23,19 @@ class Cart
 		$pdid  = mysqli_real_escape_string($this->db->link, $pdid);
 		$sid   = session_id();
 
-		$sql = "SELECT * FROM produits WHERE id = '$pdid'";
+		$sql = "SELECT * FROM tbl_product WHERE pid = '$pdid'";
 		$result = $this->db->select($sql)->fetch_assoc();
-		$productName = $result['nom'];
-		$price		 = $result['prix'];
-		$image 		 = $result['img'];
+		$productName = $result['productName'];
+		$price		 = $result['price'];
+		$image 		 = $result['image'];
 
-		$cksql  = "SELECT * FROM panier WHERE produit_id = '$pdid' AND sessionId = '$sid'";
+		$cksql  = "SELECT * FROM tbl_cart WHERE productId = '$pdid' AND sessionId = '$sid'";
 		$ckpd = $this->db->select($cksql);
 		if ($ckpd) {
 			$msg = "<span class='error'>Product already added to Cart.</span>";
 			return $msg;
 		}else{
-			$insertSql = "INSERT INTO panier(sessionId, produit_id, produit_nom, prix, quantité, image) VALUES('$sid', '$pdid', '$productName','$price','$quant', '$image')";
+			$insertSql = "INSERT INTO tbl_cart(sessionId, productId, productName, price, quantity, image) VALUES('$sid', '$pdid', '$productName','$price','$quant', '$image')";
 			$inserted = $this->db->insert($insertSql);
 			if ($inserted) {
 				header("Location: cart.php");
@@ -48,16 +48,16 @@ class Cart
 	//get cart product function
 	public function getCartProduct(){
 		$sid = session_id();
-		$sql = "SELECT * FROM panier WHERE sessionId = '$sid'";
+		$sql = "SELECT * FROM tbl_cart WHERE sessionId = '$sid'";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//update cart quantity
 	public function updateCartQuantity($quant, $cartid){
-		$sql = "UPDATE panier
+		$sql = "UPDATE tbl_cart
 				SET
-				quantité ='$quant'
-				WHERE id = '$cartid' ";
+				quantity ='$quant'
+				WHERE cartId = '$cartid' ";
 		$updated = $this->db->update($sql);
 		if ($updated) {
 			header("Location: cart.php");
@@ -68,7 +68,7 @@ class Cart
 	}
 	//delete cart item
 	public function deleteCart($delCart){
-		$sql = "DELETE FROM panier WHERE id = '$delCart'";
+		$sql = "DELETE FROM tbl_cart WHERE cartId = '$delCart'";
 		$result = $this->db->delete($sql);
 		if ($result) {
 			header("Location: cart.php");
@@ -77,7 +77,7 @@ class Cart
 	//check cart table 
 	public function checkCartTable(){
 		$sid = session_id();
-		$sql = "SELECT * FROM panier WHERE sessionId = '$sid'";
+		$sql = "SELECT * FROM tbl_cart WHERE sessionId = '$sid'";
 		$result = $this->db->select($sql);
 		return $result;
 	}
@@ -85,7 +85,7 @@ class Cart
 	//delete customer cart item
 	public function delCustomerCart(){
 		$sid = session_id();
-		$sql = "DELETE FROM panier WHERE sessionId = '$sid'";
+		$sql = "DELETE FROM tbl_cart WHERE sessionId = '$sid'";
 		return $this->db->delete($sql);
 	}
 

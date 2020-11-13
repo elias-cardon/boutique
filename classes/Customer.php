@@ -18,40 +18,40 @@ class Customer
 		$this->fm = new Format();
 	}
 	public function customerReg($data){
-		$nom = $this->fm->validation($data['nom/prenom']);
-		$nom = mysqli_real_escape_string($this->db->link, $nom);
+		$name = $this->fm->validation($data['name']);
+		$name = mysqli_real_escape_string($this->db->link, $name);
 
-		$ville = $this->fm->validation($data['ville']);
-		$ville = mysqli_real_escape_string($this->db->link, $ville);
+		$city = $this->fm->validation($data['city']);
+		$city = mysqli_real_escape_string($this->db->link, $city);
 
-		$postal = $this->fm->validation($data['postal']);
-		$postal = mysqli_real_escape_string($this->db->link, $postal);
+		$zip = $this->fm->validation($data['zip']);
+		$zip = mysqli_real_escape_string($this->db->link, $zip);
 
 		$email = $data['email'];
 		$email = mysqli_real_escape_string($this->db->link, $email);
 
-		$adresse = $this->fm->validation($data['adresse']);
-		$adresse = mysqli_real_escape_string($this->db->link, $adresse);
+		$address = $this->fm->validation($data['address']);
+		$address = mysqli_real_escape_string($this->db->link, $address);
 
-		$pays = $this->fm->validation($data['pays']);
-	    $pays = mysqli_real_escape_string($this->db->link, $pays);
-	    $telephone = $this->fm->validation($data['telephone']);
-	    $telephone = mysqli_real_escape_string($this->db->link, $telephone);
-	    $password = $this->fm->validation(md5($data['password']));
-	    $password = mysqli_real_escape_string($this->db->link, $password);
+		$country = $this->fm->validation($data['country']);
+	    $country = mysqli_real_escape_string($this->db->link, $country);
+	    $phone = $this->fm->validation($data['phone']);
+	    $phone = mysqli_real_escape_string($this->db->link, $phone);
+	    $pass = $this->fm->validation(md5($data['pass']));
+	    $pass = mysqli_real_escape_string($this->db->link, $pass);
 	    //check empty value
-	    if (empty($nom) or empty($ville) or empty($postal) or empty($email) or empty($adresse) or empty($pays) or empty($telephone) or empty($password))
+	    if (empty($name) or empty($city) or empty($zip) or empty($email) or empty($address) or empty($country) or empty($phone) or empty($pass))
 		{
 			$msg = "<span class='error'>Fields must not be empty !.</span>";
 			return $msg;
 		}
-		$ckemail = "SELECT * FROM utilisateurs WHERE email='$email'";
+		$ckemail = "SELECT * FROM tbl_customer WHERE email='$email'";
 		$result = $this->db->select($ckemail);
 		if ($result != false) {
 			$msg = "<span class='error'>This email already registered !.</span>";
 			return $msg;
 		}else{
-			 $sql = "INSERT INTO utilisateurs(nom,ville,postal,email,adresse,pays,telephone,password) VALUES('$nom','$ville','$zip','$email','$adresse','$pays','$telephone','$password')";
+			 $sql = "INSERT INTO tbl_customer(name,city,zip,email,address,country,phone,pass) VALUES('$name','$city','$zip','$email','$address','$country','$phone','$pass')";
 		    $inserted = $this->db->insert($sql);
 		    if ($inserted) {
 		    	$msg = "<span class='success'>Customer Registered successfully !.</span>";
@@ -65,22 +65,22 @@ class Customer
 	}
 	//customer login
 	public function customerLogin($data){
-		$email = $data['mail'];
+		$email = $data['uemail'];
 		$email = mysqli_real_escape_string($this->db->link, $email);
-		$password = $this->fm->validation(md5($data['password']));
-	    $password = mysqli_real_escape_string($this->db->link, $password);
-	    if (empty($email) or empty($password))
+		$pass = $this->fm->validation(md5($data['password']));
+	    $pass = mysqli_real_escape_string($this->db->link, $pass);
+	    if (empty($email) or empty($pass))
 		{
 			$msg = "<span class='error'>Fields must not be empty !.</span>";
 			return $msg;
 		}else{
-			$sql = "SELECT * FROM utilisateurs WHERE email='$email' AND password='$password'";
+			$sql = "SELECT * FROM tbl_customer WHERE email='$email' AND pass='$pass'";
 			$result = $this->db->select($sql);
 			if ($result != false) {
 				$value = $result->fetch_assoc();
-				Session::set("login",true);
-				Session::set("id",$value['csId']);
-				Session::set("name",$value['name']);
+				Session::set("cslogin",true);
+				Session::set("csid",$value['csId']);
+				Session::set("csname",$value['name']);
 				header("Location: cart.php");
 			}else{
 				$msg = "<span class='error'>email or password not matched !.</span>";
@@ -90,43 +90,43 @@ class Customer
 	}
 	//get single customer information
 	public function getCustomerInfo($csid){
-		$sql = "SELECT * FROM utilisateurs WHERE id='$id'" ;
+		$sql = "SELECT * FROM tbl_customer WHERE csId='$csid'" ;
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//customer profile update
 	public function customerProfileUpdate($data,$cid){
-		$nom = $this->fm->validation($data['nom']);
-		$nom = mysqli_real_escape_string($this->db->link, $nom);
+		$name = $this->fm->validation($data['name']);
+		$name = mysqli_real_escape_string($this->db->link, $name);
 
-		$ville = $this->fm->validation($data['ville']);
-		$ville = mysqli_real_escape_string($this->db->link, $ville);
+		$city = $this->fm->validation($data['city']);
+		$city = mysqli_real_escape_string($this->db->link, $city);
 
-		$ville = $this->fm->validation($data['ville']);
-		$ville = mysqli_real_escape_string($this->db->link, $ville);
+		$zip = $this->fm->validation($data['zip']);
+		$zip = mysqli_real_escape_string($this->db->link, $zip);
 
-		$adresse = $this->fm->validation($data['adresse']);
-		$adresse = mysqli_real_escape_string($this->db->link, $adresse);
+		$address = $this->fm->validation($data['address']);
+		$address = mysqli_real_escape_string($this->db->link, $address);
 
-		$pays = $this->fm->validation($data['pays']);
-	    $pays = mysqli_real_escape_string($this->db->link, $pays);
-	    $telephone = $this->fm->validation($data['telephone']);
-	    $telephone = mysqli_real_escape_string($this->db->link, $telephone);
+		$country = $this->fm->validation($data['country']);
+	    $country = mysqli_real_escape_string($this->db->link, $country);
+	    $phone = $this->fm->validation($data['phone']);
+	    $phone = mysqli_real_escape_string($this->db->link, $phone);
 	    //check empty value
-	    if (empty($nom) or empty($ville) or empty($ville) or empty($adresse) or empty($pays) or empty($telephone))
+	    if (empty($name) or empty($city) or empty($zip) or empty($address) or empty($country) or empty($phone))
 		{
 			$msg = "<span class='error'>Fields must not be empty !.</span>";
 			return $msg;
 		}else{
 			$sql = "UPDATE tbl_customer
 					 SET 
-					 nom = '$nom',
-					 ville = '$ville',
-					 ville = '$ville',
-					 adresse = '$adresse',
-					 pays = '$pays',
-					 telephone = '$telephone'
-					 WHERE id='$id' ";
+					 name = '$name',
+					 city = '$city',
+					 zip = '$zip',
+					 address = '$address',
+					 country = '$country',
+					 phone = '$phone'
+					 WHERE csId='$cid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
 				$msg = "<span class='success'>Profile Successfully Updated !.</span>";
@@ -141,11 +141,11 @@ class Customer
 	//Order Product and save order info in tbl_order
 	public function orderProduct($csid){
 		$sid = session_id();
-		$sql = "SELECT * FROM panier WHERE sessionId = '$sid'";
+		$sql = "SELECT * FROM tbl_cart WHERE sessionId = '$sid'";
 		$cartinfo = $this->db->select($sql);
 		if ($cartinfo) {
 			while ($getCart = $cartinfo->fetch_assoc()) {
-				$pdid = $getCart['produit_id'];
+				$pdid = $getCart['productId'];
 				$productName = $getCart['productName'];
 				$quantity = $getCart['quantity'];
 				$price = $getCart['price']*$quantity;

@@ -90,18 +90,18 @@
 						</div>
 			      </div>
 	<?php
-		if (isset($_GET['utilisateurs_id'])) {
+		if (isset($_GET['csid'])) {
 			$delCart = $ct->delCustomerCart();
-			$delCompare = $pd->delCustomerCompare(Session::get('utilisateurs_id'));
+			$delCompare = $pd->delCustomerCompare(Session::get('csid'));
 			Session::destroy();
 		}
 	?>
 		   <div class="login">
 		<?php
-			$login = Session::get('utilisateurs_login');
+			$login = Session::get('cslogin');
 			if ($login == true) {
 		?>
-			<a href="?utilisateurs_id=<?php echo Session::get('utilisateurs_id'); ?>">Logout</a>
+			<a href="?csid=<?php echo Session::get('csid'); ?>">Logout</a>
 
 		<?php }else{  ?>
 			<a href="login.php">Login</a>
@@ -117,13 +117,13 @@
 	  <li><a href="index.php">Home</a></li>
 	 <!--  <li><a href="topbrands.php">Top Brands</a></li> -->
 	   <?php
-	  	$ckCompare = $pd->checkCompareData(Session::get('utilisateurs_id'));
+	  	$ckCompare = $pd->checkCompareData(Session::get('csid'));
 	 	if ($ckCompare) { ?>
 		    <li><a href="compare.php">Compare</a></li>
 	 	<?php } ?>
 
 	 	 <?php
-	  	$ckwlist = $pd->checkWishlistData(Session::get('utilisateurs_id'));
+	  	$ckwlist = $pd->checkWishlistData(Session::get('csid'));
 	 	if ($ckwlist) { ?>
 		    <li><a href="wishlist.php">Wishlist</a></li>
 	 	<?php } ?>
@@ -131,19 +131,19 @@
 	 	<?php 
 	 	$chkCart = $ct->checkCartTable();
 	 	if ($chkCart) { ?>
-	 		<li><a href="panier.php">Cart</a></li>
+	 		<li><a href="cart.php">Cart</a></li>
 	 		<li><a href="payment.php">Payment</a></li>
 	 	<?php } ?>
 	  
 	  <?php 
-	  	$utilisateurs_id = Session::get('utilisateurs_id');
-	 	$ckorder = $csmr->checkOrder($utilisateurs_id);
+	  	$csid = Session::get('csid');
+	 	$ckorder = $csmr->checkOrder($csid);
 	 	if ($ckorder) { ?>
 	 		<li><a href="orderdetails.php">Order</a></li>
 	 	<?php } ?>
 
 	  <?php
-	  	$userlogin = Session::get('utilisateurs_login');
+	  	$userlogin = Session::get('cslogin');
 	  	if ($userlogin == true) { ?>
 	  	<li><a href="profile.php">Profile</a></li>
 	  <?php	} ?>

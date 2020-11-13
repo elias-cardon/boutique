@@ -26,7 +26,7 @@ class Brand
 			$msg = "<span class='error'>Brand Name field must not be empty.</span>";
 			return $msg;
 		}else{
-			$sql = "INSERT INTO marque(nom) VALUES('$marquenom')";
+			$sql = "INSERT INTO tbl_brand(brandName) VALUES('$brandname')";
 			$inserted = $this->db->insert($sql);
 			if ($inserted) {
 				$msg = "<span class='success'>Brand inserted successfully.</span>";
@@ -40,13 +40,13 @@ class Brand
 	}
 	//fetch all Brand list
 	public function getAllbrand(){
-		$sql = "SELECT * FROM marque ORDER BY id DESC";
+		$sql = "SELECT * FROM tbl_brand ORDER BY brandId DESC";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//get Brand by ID
 	public function getBrandbyId($id){
-		$sql = "SELECT * FROM marque WHERE id=$id ";
+		$sql = "SELECT * FROM tbl_brand WHERE brandId=$id ";
 		$result = $this->db->select($sql);
 		return $result;
 	}
@@ -55,7 +55,7 @@ class Brand
 	public function delBrand($delid){
 		$delid = $this->fm->validation($delid);
 		$delid = mysqli_real_escape_string($this->db->link, $delid);
-		$sql = "DELETE FROM marque WHERE id='$delid'";
+		$sql = "DELETE FROM tbl_brand WHERE brandId='$delid'";
 		$result = $this->db->delete($sql);
 		if ($result) {
 			$msg = "<span class='error'>Successfully Deleted !.</span>";
@@ -79,7 +79,7 @@ class Brand
 			$msg = "<span class='error'>Brand field must not be empty.</span>";
 			return $msg;
 		}else{
-			$sql = "UPDATE marque SET nom = '$nom' WHERE id='$brandid' ";
+			$sql = "UPDATE tbl_brand SET brandName = '$brandname' WHERE brandId='$brandid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
 				$msg = "<span class='success'>Successfully Updated !.</span>";
