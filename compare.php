@@ -30,9 +30,9 @@
 							<tr>
 								<td><?php echo $i?></td>
 								<td><?php echo $cartpd['produit_nom'];?></td>
-								<td>$ <?php echo $cartpd['prix'];?></td>
+								<td>€ <?php echo $cartpd['prix'];?></td>
 								<td><img src="admin/<?php echo $cartpd['image'];?>" alt=""/></td>
-								<td><a href="details.php?pdid=<?php echo $cartpd['productId'];?>">View</a></td>
+								<td><a href="details.php?pdid=<?php echo $cartpd['produit_id'];?>">View</a></td>
 		
 							</tr>
 

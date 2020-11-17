@@ -18,40 +18,40 @@ class Customer
 		$this->fm = new Format();
 	}
 	public function customerReg($data){
-		$name = $this->fm->validation($data['name']);
-		$name = mysqli_real_escape_string($this->db->link, $name);
+		$nom = $this->fm->validation($data['nom']);
+		$nom = mysqli_real_escape_string($this->db->link, $nom);
 
-		$city = $this->fm->validation($data['city']);
-		$city = mysqli_real_escape_string($this->db->link, $city);
+		$ville = $this->fm->validation($data['ville']);
+		$ville = mysqli_real_escape_string($this->db->link, $ville);
 
-		$zip = $this->fm->validation($data['zip']);
-		$zip = mysqli_real_escape_string($this->db->link, $zip);
+		$postale = $this->fm->validation($data['postale']);
+		$postale = mysqli_real_escape_string($this->db->link, $postale);
 
 		$email = $data['email'];
 		$email = mysqli_real_escape_string($this->db->link, $email);
 
-		$address = $this->fm->validation($data['address']);
-		$address = mysqli_real_escape_string($this->db->link, $address);
+		$adresse = $this->fm->validation($data['adresse']);
+		$adresse = mysqli_real_escape_string($this->db->link, $adresse);
 
-		$country = $this->fm->validation($data['country']);
-	    $country = mysqli_real_escape_string($this->db->link, $country);
-	    $phone = $this->fm->validation($data['phone']);
-	    $phone = mysqli_real_escape_string($this->db->link, $phone);
+		$pays = $this->fm->validation($data['pays']);
+	    $pays = mysqli_real_escape_string($this->db->link, $pays);
+	    $telephone = $this->fm->validation($data['telephone']);
+	    $telephone = mysqli_real_escape_string($this->db->link, $telephone);
 	    $pass = $this->fm->validation(md5($data['pass']));
 	    $pass = mysqli_real_escape_string($this->db->link, $pass);
 	    //check empty value
-	    if (empty($name) or empty($city) or empty($zip) or empty($email) or empty($address) or empty($country) or empty($phone) or empty($pass))
+	    if (empty($nom) or empty($ville) or empty($postale) or empty($email) or empty($adresse) or empty($pays) or empty($telephone) or empty($pass))
 		{
 			$msg = "<span class='error'>Fields must not be empty !.</span>";
 			return $msg;
 		}
-		$ckemail = "SELECT * FROM tbl_customer WHERE email='$email'";
+		$ckemail = "SELECT * FROM utilisateurs WHERE email='$email'";
 		$result = $this->db->select($ckemail);
 		if ($result != false) {
 			$msg = "<span class='error'>This email already registered !.</span>";
 			return $msg;
 		}else{
-			 $sql = "INSERT INTO tbl_customer(name,city,zip,email,address,country,phone,pass) VALUES('$name','$city','$zip','$email','$address','$country','$phone','$pass')";
+			 $sql = "INSERT INTO utilisateurs(name,city,zip,email,adresse,pays,telephone,pass) VALUES('$name','$city','$zip','$email','$adresse','$pays','$telephone','$pass')";
 		    $inserted = $this->db->insert($sql);
 		    if ($inserted) {
 		    	$msg = "<span class='success'>Customer Registered successfully !.</span>";
@@ -74,7 +74,7 @@ class Customer
 			$msg = "<span class='error'>Fields must not be empty !.</span>";
 			return $msg;
 		}else{
-			$sql = "SELECT * FROM tbl_customer WHERE email='$email' AND pass='$pass'";
+			$sql = "SELECT * FROM utilisateur WHERE email='$email' AND pass='$pass'";
 			$result = $this->db->select($sql);
 			if ($result != false) {
 				$value = $result->fetch_assoc();
@@ -90,43 +90,43 @@ class Customer
 	}
 	//get single customer information
 	public function getCustomerInfo($csid){
-		$sql = "SELECT * FROM tbl_customer WHERE csId='$csid'" ;
+		$sql = "SELECT * FROM utilisateur WHERE id='$id'" ;
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//customer profile update
 	public function customerProfileUpdate($data,$cid){
-		$name = $this->fm->validation($data['name']);
-		$name = mysqli_real_escape_string($this->db->link, $name);
+		$nom = $this->fm->validation($data['nom']);
+		$nom = mysqli_real_escape_string($this->db->link, $nom);
 
-		$city = $this->fm->validation($data['city']);
-		$city = mysqli_real_escape_string($this->db->link, $city);
+		$ville = $this->fm->validation($data['ville']);
+		$ville = mysqli_real_escape_string($this->db->link, $ville);
 
-		$zip = $this->fm->validation($data['zip']);
-		$zip = mysqli_real_escape_string($this->db->link, $zip);
+		$postale = $this->fm->validation($data['postale']);
+		$postale = mysqli_real_escape_string($this->db->link, $postale);
 
-		$address = $this->fm->validation($data['address']);
-		$address = mysqli_real_escape_string($this->db->link, $address);
+		$adresse = $this->fm->validation($data['adresse']);
+		$adresse = mysqli_real_escape_string($this->db->link, $adresse);
 
-		$country = $this->fm->validation($data['country']);
-	    $country = mysqli_real_escape_string($this->db->link, $country);
-	    $phone = $this->fm->validation($data['phone']);
-	    $phone = mysqli_real_escape_string($this->db->link, $phone);
+		$pays = $this->fm->validation($data['pays']);
+	    $pays = mysqli_real_escape_string($this->db->link, $pays);
+	    $telephone = $this->fm->validation($data['telephone']);
+	    $telephone = mysqli_real_escape_string($this->db->link, $telephone);
 	    //check empty value
-	    if (empty($name) or empty($city) or empty($zip) or empty($address) or empty($country) or empty($phone))
+	    if (empty($nom) or empty($ville) or empty($postale) or empty($adresse) or empty($pays) or empty($telephone))
 		{
 			$msg = "<span class='error'>Fields must not be empty !.</span>";
 			return $msg;
 		}else{
 			$sql = "UPDATE tbl_customer
 					 SET 
-					 name = '$name',
-					 city = '$city',
-					 zip = '$zip',
-					 address = '$address',
-					 country = '$country',
-					 phone = '$phone'
-					 WHERE csId='$cid' ";
+					 nom = '$nom',
+					 ville = '$ville',
+					 postale = '$postale',
+					 adresse = '$adresse',
+					 pays = '$pays',
+					 telephone = '$telephone'
+					 WHERE id='$id' ";
 			$result = $this->db->update($sql);
 			if ($result) {
 				$msg = "<span class='success'>Profile Successfully Updated !.</span>";
@@ -141,52 +141,52 @@ class Customer
 	//Order Product and save order info in tbl_order
 	public function orderProduct($csid){
 		$sid = session_id();
-		$sql = "SELECT * FROM tbl_cart WHERE sessionId = '$sid'";
+		$sql = "SELECT * FROM panier WHERE sessionId = '$sid'";
 		$cartinfo = $this->db->select($sql);
 		if ($cartinfo) {
 			while ($getCart = $cartinfo->fetch_assoc()) {
 				$pdid = $getCart['productId'];
 				$productName = $getCart['productName'];
-				$quantity = $getCart['quantity'];
-				$price = $getCart['price']*$quantity;
+				$quantite = $getCart['quantite'];
+				$prix = $getCart['prix']*$quantite;
 				$image = $getCart['image'];
-				$insertsql = "INSERT INTO tbl_order(csId,productId,productName,quantity,price,image) VALUES('$csid','$pdid','$productName','$quantity','$price','$image')";
+				$insertsql = "INSERT INTO commande(csId,productId,productName,quantite,prix,image) VALUES('$csid','$pdid','$productName','$quantite','$prix','$image')";
 		        $inserted = $this->db->insert($insertsql);
 			}
 		}
 	}
 	//get payable amount of customer
 	public function payableAmount($csid){
-		$sql = "SELECT price FROM tbl_order WHERE csId='$csid' and Date=now() ";
+		$sql = "SELECT prix FROM commande WHERE csId='$csid' and Date=now() ";
 		$result = $this->db->select($sql);
 		return $result;
 
 	}
 	//get order details by customer ID
 	public function getOrderProduct($csid){
-		$sql = "SELECT * FROM tbl_order WHERE csId='$csid' ORDER BY id DESC";
+		$sql = "SELECT * FROM commande WHERE csId='$csid' ORDER BY id DESC";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//check order table by user id
 	public function checkOrder($csid){
-		$sql = "SELECT * FROM tbl_order WHERE csId = '$csid' ";
+		$sql = "SELECT * FROM commande WHERE csId = '$csid' ";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 
 	//get all order product for Admin
 	public function getAllorder(){
-		$sql = "SELECT * FROM tbl_order ORDER BY Date";
+		$sql = "SELECT * FROM commande ORDER BY Date";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//shifted order..update order table
-	public function shiftedOrder($id, $price, $time){
-		$sql = "UPDATE tbl_order
+	public function shiftedOrder($id, $prix, $date){
+		$sql = "UPDATE commande
 					 SET  
 					 status = 1
-					 WHERE csId='$id' AND price='$price' AND Date='$time' ";
+					 WHERE csId='$id' AND prix='$prix' AND Date='$date' ";
 			$result = $this->db->update($sql);
 			if ($result) {
 				$msg = "<span class='success'>Order shifted Successfully !.</span>";
@@ -197,8 +197,8 @@ class Customer
 			}
 	}
 	//delete order which is confirmed by customer
-	public function deleteConfirmOrder($id, $price, $time){
-		$sql = "DELETE FROM tbl_order WHERE csId='$id' AND price='$price' AND Date='$time'";
+	public function deleteConfirmOrder($id, $prix, $date){
+		$sql = "DELETE FROM commande WHERE csId='$id' AND prix='$prix' AND Date='$date'";
 		$result = $this->db->delete($sql);
 		if ($result) {
 			$msg = "<span class='error'>Confirmed Order Successfully Deleted !.</span>";
@@ -209,11 +209,11 @@ class Customer
 		}
 	}
 	//confirm order by customer
-	public function confirmByCustomer($id, $price, $time){
-		$sql = "UPDATE tbl_order
+	public function confirmByCustomer($id, $prix, $date){
+		$sql = "UPDATE commande
 					 SET  
 					 status = 2
-					 WHERE csId='$id' AND price='$price' AND Date='$time' ";
+					 WHERE csId='$id' AND prix='$prix' AND Date='$date' ";
 			$result = $this->db->update($sql);
 			if ($result) {
 				$msg = "<span class='success'>Thanks for Confirm the order !.</span>";

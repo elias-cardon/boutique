@@ -18,15 +18,15 @@ class Category
 		$this->db = new Database();
 		$this->fm = new Format();
 	}
-	public function insertCat($catname){
-		$catname = $this->fm->validation($catname);
-		$catname = mysqli_real_escape_string($this->db->link, $catname);
+	public function insertCat($nom){
+		$nom = $this->fm->validation($nom);
+		$nom = mysqli_real_escape_string($this->db->link, $nom);
 
-		if (empty($catname)) {
+		if (empty($nom)) {
 			$msg = "<span class='error'>Category field must not be empty.</span>";
 			return $msg;
 		}else{
-			$sql = "INSERT INTO tbl_category(catName) VALUES('$catname')";
+			$sql = "INSERT INTO categories(nom) VALUES('$nom')";
 			$inserted = $this->db->insert($sql);
 			if ($inserted) {
 				$msg = "<span class='success'>Category inserted successfully.</span>";
@@ -40,13 +40,13 @@ class Category
 	}
 	//fetch all category list
 	public function getAllcat(){
-		$sql = "SELECT * FROM tbl_category ORDER BY catId DESC";
+		$sql = "SELECT * FROM categorie ORDER BY id DESC";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//get Category by ID
 	public function getCatbyId($id){
-		$sql = "SELECT * FROM tbl_category WHERE catId=$id ";
+		$sql = "SELECT * FROM categorie WHERE id=$id ";
 		$result = $this->db->select($sql);
 		return $result;
 	}
@@ -55,7 +55,7 @@ class Category
 	public function delCategory($delid){
 		$delid = $this->fm->validation($delid);
 		$delid = mysqli_real_escape_string($this->db->link, $delid);
-		$sql = "DELETE FROM tbl_category WHERE catId='$delid'";
+		$sql = "DELETE FROM categorie WHERE id='$delid'";
 		$result = $this->db->delete($sql);
 		if ($result) {
 			$msg = "<span class='error'>Successfully Deleted !.</span>";
@@ -79,7 +79,7 @@ class Category
 			$msg = "<span class='error'>Category field must not be empty.</span>";
 			return $msg;
 		}else{
-			$sql = "UPDATE tbl_category SET catName = '$catname' WHERE catId='$catid' ";
+			$sql = "UPDATE categorie SET nom = '$nom' WHERE id='$catid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
 				$msg = "<span class='success'>Successfully Updated !.</span>";
