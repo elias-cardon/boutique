@@ -3,7 +3,7 @@
 
 <?php 
 
-include 'src/php/Base.php';
+require_once 'src/php/Base.php';
 
 $users = new Base\User();
 ?>
@@ -25,8 +25,10 @@ $users = new Base\User();
             <td><?= $user['prenom']  ?></td>
             <td><?= $user['nom']  ?></td>
             <td><?= $user['email']  ?></td>
+            <td><a href="suppression.php?id=<?= $user['id'] ?>">Supprimer</a></td>
         </tr>
     <?php } ?>
 
 </tbody>
 </table>
+
