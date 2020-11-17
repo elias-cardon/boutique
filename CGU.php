@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>CGU</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -14,7 +15,7 @@
     <div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
 
         <!-- Title -->
-        <h2 class="card-title h2">Conditions générales d'utilisation</h2>
+        <h2 class="card-title h2 text-info text-info">Conditions générales d'utilisation</h2>
 
         <!-- Subtitle -->
         <p class="my-4 h6">Les articles en vente sur La Bonne Planque</p>
@@ -25,7 +26,7 @@
             <!-- Grid column -->
             <div class="col-xl-7 pb-2">
 
-                <p class="card-text">Tous les articles vendus sur Candysan sont des articles originaux achetés et
+                <p class="card-text">Tous les articles vendus sur La Bonne Planque sont des articles originaux achetés et
                     expédiés depuis Nos locaux à Marseille. Tous les produits sont destinés au marché français et
                     respectent les normes et la législation en vigueur en France. Dans la grande majorité des cas les
                     informations et conseils d'utilisation inscrits sur les emballages sont en français uniquement.</p>

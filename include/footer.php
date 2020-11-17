@@ -1,63 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="src/css/style.css">
-</head>
-<body>
-<!-- Footer -->
-<footer>
-  <nav class="footer-inner">
-    <section class="footer-item">
-      <h1>La Bonne Planque</h1>
-      
-      <h2>Nous créons des possibilités <br>pour un monde plus sucrés.<br><b class="color">Soyez audacieux.</b></h2>
-    </section>
-        
-    <section class="footer-item">
-      <h3>Explore</h3>
-        <ul>
-          <li><a href="index.php">Accueil</a></li>
-          <li><a href="propos.php">A propos de nous</a></li>
-          <li><a href="engagement.php">Nos engagements</a></li>
-          <!-- <li><a href="#">Careers</a></li> -->
-        </ul>
-    </section>
-          
-    <section class="footer-item">
-      <h3>Notre adresse</h3>
-        <a href="#">
-        <p>La Bonne Planque</p>
-        <p>8 rue d'Hozier</p>
-        <p>13002 Marseille, France</p>
-        </a>
-            
-      <h3 class="desktop">Nous contacter</h3>
-        <p class="desktop"><a href="#">roxan@laplateforme.io</a></p>
-        <p class="desktop"><a href="#">04 84 89 43 69</a></p>
-    </section>
-        
-    <section class="footer-item">
-      <h3>Follow</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/?hl=fr">Instagram</a></li>
-          <li><a href="https://twitter.com/?lang=fr">Twitter</a></li>
-          <li><a href="https://www.facebook.com/">Facebook</a></li>
-        </ul>
-    </section>
-        
-    <section class="footer-item">
-      <h3>Legal</h3>
-        <ul>
-          <li><a href="CGU.php">CGU</a></li>
-          <li><a href="faq.php">FAQ</a></li>
-        </ul>
-    </section>
-  </nav>
-</footer>
-<!-- Footer -->
-
-
+</div>
+   <div class="footer">
+   	  <div class="wrapper">	
+	     <div class="section group">
+				
+				</div>
+			</div>
+			<div class="copy_right">
+				<p>Electronics Point &copy; All rights Reseverd </p>
+		   </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+	 		};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+    <link href="css/flexslider.css" rel='stylesheet' type='text/css' />
+	  <script defer src="js/jquery.flexslider.js"></script>
+	  <script type="text/javascript">
+		$(function(){
+		  SyntaxHighlighter.all();
+		});
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	  </script>
 </body>
 </html>
-

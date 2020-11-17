@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Livraison</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -14,7 +16,7 @@
     <div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
 
         <!-- Title -->
-        <h2 class="card-title h2">Livraison</h2>
+        <h2 class="card-title h2 text-info">Livraison</h2>
 
         <!-- Subtitle -->
         <p class="my-4 h6">Le transport de votre colis</p>
@@ -53,11 +55,11 @@
             <div>
 
                 <p class="card-text">
-                <ul>
-                    <li>UPS</li>
-                    <li>Colissimo</li>
-                    <li>DPD</li>
-                    <li>Fedex</li>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">UPS</li>
+                    <li class="list-group-item">Colissimo</li>
+                    <li class="list-group-item">DPD</li>
+                    <li class="list-group-item">Fedex</li>
                 </ul>
                 </p>
 
@@ -119,16 +121,19 @@
 
 
                     <strong>Si votre commande a été renvoyée à nos locaux.</strong> Cela arrive en général si le facteur
-                    ne trouve pas votre adresse ou si vous n'avez pas été chercher votre colis à la poste dans les temps (la poste garde les
+                    ne trouve pas votre adresse ou si vous n'avez pas été chercher votre colis à la poste dans les temps
+                    (la poste garde les
                     colis en attente environ 2 à 3 semaines si vous êtes absent lors de la livraison). Le trajet
-                    aller-retour vers nos locaux prendra entre 1 mois et 3 mois depuis le jour de votre commande. Parfois
+                    aller-retour vers nos locaux prendra entre 1 mois et 3 mois depuis le jour de votre commande.
+                    Parfois
                     plus mais c'est assez rare. Nous pourrons vous renvoyer votre commande une fois qu'elle sera revenue
                     à nos locaux. Il est possible que vous ayez à régler une seconde fois les frais de port pour
                     l'expédition, cela dépend du motif du retour. Dans tous les cas nous vous envoyons un e-mail au plus
                     vite après réception de votre paquet.<br/><br/>
 
 
-                    <strong>Si votre colis a été perdu, volé ou livré à une mauvaise adresse.</strong> Malheureusement cela arrive même
+                    <strong>Si votre colis a été perdu, volé ou livré à une mauvaise adresse.</strong> Malheureusement
+                    cela arrive même
                     si c'est très rare. Dans ce cas il est impossible de faire quoi que ce soit si vous avez choisi la
                     livraison sans assurance.<br/><br/>
 

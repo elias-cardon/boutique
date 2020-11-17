@@ -1,5 +1,4 @@
 <?php 
-
 class BaseApp 
 {
     public function _load($class)

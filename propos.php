@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>A propos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -14,10 +15,10 @@
     <div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
 
         <!-- Title -->
-        <h2 class="card-title h2">A propos de La Bonne Planque</h2>
+        <h2 class="card-title h2 text-info">A propos de La Bonne Planque</h2>
 
         <!-- Subtitle -->
-        <p class="my-4 h6">La Bonne Planque est un site édité par Ici Marseille</p>
+        <p class="my-4 h6">La Bonne Planque est un site édité par <strong>Ici Marseille</strong></p>
 
         <!-- Grid row -->
         <div class="row d-flex justify-content-center">

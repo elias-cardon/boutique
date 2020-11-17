@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Nos engagements</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -14,7 +15,7 @@
     <div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
 
         <!-- Title -->
-        <h2 class="card-title h2">Nos engagements</h2>
+        <h2 class="card-title h2 text-info">Nos engagements</h2>
 
         <div class="row d-flex justify-content-center">
 
