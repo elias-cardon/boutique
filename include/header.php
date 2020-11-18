@@ -59,7 +59,7 @@
 						
 					</li>
 					<li>
-						<h3>Electronics Point</h3>
+						<h3>La Bonne Planque</h3>
 					</li>
 				</ul>
 			</div>
