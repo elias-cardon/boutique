@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>CGU</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -26,7 +27,8 @@
             <!-- Grid column -->
             <div class="col-xl-7 pb-2">
 
-                <p class="card-text">Tous les articles vendus sur La Bonne Planque sont des articles originaux achetés et
+                <p class="card-text">Tous les articles vendus sur La Bonne Planque sont des articles originaux achetés
+                    et
                     expédiés depuis Nos locaux à Marseille. Tous les produits sont destinés au marché français et
                     respectent les normes et la législation en vigueur en France. Dans la grande majorité des cas les
                     informations et conseils d'utilisation inscrits sur les emballages sont en français uniquement.</p>
@@ -285,16 +287,19 @@
             <!-- Grid column -->
             <div class="col-xl-7 pb-2">
 
-                <p class="card-text">L’assurance La Bonne Planque couvre les problèmes de livraison sur les paquets "Colissimo" et
+                <p class="card-text">L’assurance La Bonne Planque couvre les problèmes de livraison sur les paquets
+                    "Colissimo" et
                     "UPS".<br/><br/>
 
 
-                    Si une commande n’arrive pas à destination ou est retournée à nos locaux en tout ou en partie, nous la
+                    Si une commande n’arrive pas à destination ou est retournée à nos locaux en tout ou en partie, nous
+                    la
                     renvoyons à nos frais et en remplaçant les produits abîmés durant le transport ainsi que ceux ayant
                     une date de péremption trop proche.<br/><br/>
 
 
-                    L’assurance La Bonne Planque fonctionne dans tous les cas lorsqu’un colis est perdu ou retourné à nos locaux à
+                    L’assurance La Bonne Planque fonctionne dans tous les cas lorsqu’un colis est perdu ou retourné à
+                    nos locaux à
                     cause d’un problème de livraison, peu importe le motif de retour. Exemples : paquet non réclamé,
                     adresse incomplète, adresse introuvable, fausse direction…<br/><br/>
 
@@ -303,18 +308,21 @@
                     soit endommagé.<br/><br/>
 
 
-                    Si un colis est retourné à nos locaux, le délai de retour est de 1 à 3 mois à partir de la date de la
+                    Si un colis est retourné à nos locaux, le délai de retour est de 1 à 3 mois à partir de la date de
+                    la
                     commande. Le colis est envoyé à nouveau dès qu’il nous revient après confirmation de l’adresse de
                     livraison par le client si cela est nécessaire.<br/><br/>
 
 
-                    Un colis est considéré comme perdu s’il n’est ni arrivé à destination ni retourné à nos locaux après 90
+                    Un colis est considéré comme perdu s’il n’est ni arrivé à destination ni retourné à nos locaux après
+                    90
                     jours (3 mois). Passé ce délai, toute réclamation devra être faite sous 30 jours (1 mois), la
                     commande pourra alors être de nouveau expédiée ou remboursée sous forme d’avoir. Le délai de
                     réclamation passé, aucune demande de dédommagement ne pourra être acceptée.<br/><br/>
 
 
-                    L’assurance La Bonne Planque fonctionne sur un maximum de 3 colis par commande, soit sur les commandes dont
+                    L’assurance La Bonne Planque fonctionne sur un maximum de 3 colis par commande, soit sur les
+                    commandes dont
                     les frais de port sont égaux ou inférieurs à environ 62 euros.<br/><br/>
 
 

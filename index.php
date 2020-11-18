@@ -6,7 +6,6 @@
     <title>La Bonne Planque</title>
 
 
-
     <!-- <link rel="stylesheet" type="text/css" href="src/css/style.css"> -->
 </head>
 <body>
@@ -16,10 +15,10 @@
     ?>
 </header>
 <main>
-	
+
 </main>
 <footer>
-	<?php
+    <?php
     require_once('include/footer.php');
     ?>
 </footer>
