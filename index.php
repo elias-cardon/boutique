@@ -1,27 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Bonne Planque</title>
+<?php
+	include("inc/header.php");
+?>
 
 
-    <!-- <link rel="stylesheet" type="text/css" href="src/css/style.css"> -->
-</head>
-<body>
-<header>
-    <?php
-    require_once('include/header.php');
-    ?>
-</header>
-<main>
+ <div class="main">
+    <div class="content">
+    	<div class="content_top">
+    		<div class="heading">
+    		<h3>En tête de liste</h3>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
+	      <div class="section group">
+	      	<?php
+	      		$getFeaturedPd = $pd->getFeaturedProduct();
+	      		if ($getFeaturedPd) {
+	      			while ($fpd = $getFeaturedPd->fetch_assoc()) {
+	      	?>
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="details.php?pdid=<?php echo $fpd['pid'];?>"><img src="admin/<?php echo $fpd['image']; ?>" alt="" /></a>
+					 <h2><?php echo $fpd['productName'];?></h2>
+					 <p><?php echo $fm->textShorten($fpd['body'], 50);?></p>
+					 <p><span class="price">$ <?php echo $fpd['price'];?></span></p>
+				     <div class="button"><span><a href="details.php?pdid=<?php echo $fpd['pid'];?>" class="details">Details</a></span></div>
+				</div>
+			<?php
+					}
+	      		}else{
+	      			echo "<span class='error'>No product found.</span>";
+	      		}
+			?>
 
-</main>
-<footer>
-    <?php
-    require_once('include/footer.php');
-    ?>
-</footer>
-</body>
-<script src="script.js"></script>
-</html>
+			</div>
+			<div class="content_bottom">
+    		<div class="heading">
+    		<h3>Nouvelle arrivage</h3>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
+			<div class="section group">
+			<?php
+      		$getNewPd = $pd->getNewProduct();
+      		if ($getNewPd) {
+      			while ($newpd = $getNewPd->fetch_assoc()) {
+	      	?>
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="details.php?pdid=<?php echo $newpd['pid'];?>"><img src="admin/<?php echo $newpd['image']; ?>" alt="" /></a>
+					 <h2><?php echo $newpd['productName'];?></h2>
+					 <p><?php echo $fm->textShorten($newpd['body'], 50);?></p>
+					 <p><span class="price">$ <?php echo $newpd['price'];?></span></p>
+				     <div class="button"><span><a href="details.php?pdid=<?php echo $newpd['pid'];?>" class="details">Details</a></span></div>
+				</div>
+			<?php
+					}
+	      		}else{
+	      			echo "<span class='error'>No product found.</span>";
+	      		}
+			?>
+				
+			</div>
+    </div>
+ </div>
+
+<?php
+	include("inc/footer.php");
+?>

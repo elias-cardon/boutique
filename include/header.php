@@ -53,13 +53,9 @@
 		<div class="header_top">
 			<div class="logo">
 				<ul>
+					
 					<li>
-						
-						<a href="index.php"><img src="images/in.png" alt="" /></a>
-						
-					</li>
-					<li>
-						<h3>La Bonne Planque</h3>
+						<h3>Le Bazaaar!</h3>
 					</li>
 				</ul>
 			</div>
@@ -72,7 +68,7 @@
 			    <div class="shopping_cart">
 					<div class="cart">
 						<a href="cart.php" title="View my shopping cart" rel="nofollow">
-								<span class="cart_title">Cart</span>
+								<span class="cart_title">Panier</span>
 								<span class="no_product">
 									<?php
 									$getData = $ct->checkCartTable();
@@ -81,7 +77,7 @@
 										$qty = Session::get("qty");
 											echo "$ ".$sum." ~ Qty: ".$qty;
 									}else{
-										echo "(Empty)";
+										echo "(Vide)";
 									}
 										
 									?>

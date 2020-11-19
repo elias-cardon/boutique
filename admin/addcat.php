@@ -7,7 +7,7 @@ include "../classes/Category.php";
     $cat = new Category();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $catname = $_POST['cateforie_nom'];
+        $catname = $_POST['catName'];
         $insertCat = $cat->insertCat($catname);
     }
 ?>
