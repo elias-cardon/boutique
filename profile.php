@@ -25,19 +25,19 @@
 
 		?>
 			<table class="tblone">
-				<tr><td colspan='3'><h2 style="text-align:center">Your profile details</h2></td></tr>
+				<tr><td colspan='3'><h2 style="text-align:center">Les détails de votre profil</h2></td></tr>
 				<tr>
-					<td>Name</td>
+					<td>Nom</td>
 					<td>:</td>
 					<td><?php echo $row['name'];?></td>
 				</tr>
 				<tr>
-					<td>City</td>
+					<td>Ville</td>
 					<td>:</td>
 					<td><?php echo $row['city'];?></td>
 				</tr>
 				<tr>
-					<td>Zip</td>
+					<td>Code postal</td>
 					<td>:</td>
 					<td><?php echo $row['zip'];?></td>
 				</tr>
@@ -47,17 +47,17 @@
 					<td><?php echo $row['email'];?></td>
 				</tr>
 				<tr>
-					<td>Address</td>
+					<td>Adresse</td>
 					<td>:</td>
 					<td><?php echo $row['address'];?></td>
 				</tr>
 				<tr>
-					<td>Country</td>
+					<td>Pays</td>
 					<td>:</td>
 					<td><?php echo $row['country'];?></td>
 				</tr>
 				<tr>
-					<td>Phone</td>
+					<td>Téléphone</td>
 					<td>:</td>
 					<td><?php echo $row['phone'];?></td>
 				</tr>

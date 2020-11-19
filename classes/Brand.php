@@ -23,16 +23,16 @@ class Brand
 		$brandname = mysqli_real_escape_string($this->db->link, $brandname);
 
 		if (empty($brandname)) {
-			$msg = "<span class='error'>Brand Name field must not be empty.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide.</span>";
 			return $msg;
 		}else{
 			$sql = "INSERT INTO tbl_brand(brandName) VALUES('$brandname')";
 			$inserted = $this->db->insert($sql);
 			if ($inserted) {
-				$msg = "<span class='success'>Brand inserted successfully.</span>";
+				$msg = "<span class='success'>Marque ajoutée avec succès !</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Failed to insert.</span>";
+				$msg = "<span class='error'>Insertion ratée ...</span>";
 				return $msg;
 			}
 		}
@@ -58,10 +58,10 @@ class Brand
 		$sql = "DELETE FROM tbl_brand WHERE brandId='$delid'";
 		$result = $this->db->delete($sql);
 		if ($result) {
-			$msg = "<span class='error'>Successfully Deleted !.</span>";
+			$msg = "<span class='error'>Suppression réussie !.</span>";
 			return $msg;
 		}else{
-			$msg = "<span class='error'>Failed to Delete.</span>";
+			$msg = "<span class='error'>Suppression ratée ...</span>";
 			return $msg;
 		}
 
@@ -76,16 +76,16 @@ class Brand
 		//var_dump($brandname, $brandid);
 
 		if (empty($brandname) || empty($brandid)) {
-			$msg = "<span class='error'>Brand field must not be empty.</span>";
+			$msg = "<span class='error'>Le champ ne doit pas être vide.</span>";
 			return $msg;
 		}else{
 			$sql = "UPDATE tbl_brand SET brandName = '$brandname' WHERE brandId='$brandid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
-				$msg = "<span class='success'>Successfully Updated !.</span>";
+				$msg = "<span class='success'>Mise à jour réussie !.</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Filed to Update !.</span>";
+				$msg = "<span class='error'>Mise à jour ratée ...</span>";
 				return $msg;
 			}
 		}

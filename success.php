@@ -39,7 +39,7 @@
     <div class="content">
 		<div class="section group">
 	   		<div class="success">
-	   			<h2>Order payment successfull</h2><br>
+	   			<h2>Commande passée</h2><br>
 	   			
 	   			 <?php
 	   			 	$csid = Session::get('csid');
@@ -51,7 +51,7 @@
 	   					}
 	   			
 	   			?>
-	   		<p>Payable amount(Including VAT) :</p>
+	   		<p>Montant payé (TVA incluse) :</p>
 				<?php
 						$vat = $sum*0.1;
 	   					$grandTotal = $sum+$vat;
@@ -59,8 +59,8 @@
 	   				}
 				?>
 	   		<br>
-	   			<p>Thanks for purches..we will contanct with you with in 72 hours</p><br><br>
-	   			<a href="orderdetails.php">Check Order Details</a>
+	   			<p>Merci pour cet achat ! Nous vous contacterons dans les 72 prochaines heures</p><br><br>
+	   			<a href="orderdetails.php">Details de la commande</a>
 	   		</div>
 		</div>
        <div class="clear"></div>

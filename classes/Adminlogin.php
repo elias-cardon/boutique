@@ -30,7 +30,7 @@ class Adminlogin
 	    $pass = mysqli_real_escape_string($this->db->link, $pass);
 
 		if (empty($uname) || empty($pass)) {
-			$lgmsg = "Username or Password must not be empty !";
+			$lgmsg = "Le login ou le mot de passe ne doivent pas être vides !";
 			return $lgmsg;
 		}else{
 			$sql = "SELECT * FROM tbl_admin WHERE ad_user='{$uname}' AND ad_pass='{$pass}'";
@@ -47,7 +47,7 @@ class Adminlogin
 			 	 header("Location: index.php");
 			 	
 			 }else{
-			 	$lgmsg = "Username or Password not Match!";
+			 	$lgmsg = "Le login ou le mot de passe ne correspond pas !";
 			 	return $lgmsg;
 			 }
 		}

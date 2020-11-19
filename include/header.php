@@ -55,7 +55,7 @@
 				<ul>
 					
 					<li>
-						<h3>Le Bazaaar!</h3>
+						<h3>La Bonne Planque</h3>
 					</li>
 				</ul>
 			</div>
@@ -97,7 +97,7 @@
 			$login = Session::get('cslogin');
 			if ($login == true) {
 		?>
-			<a href="?csid=<?php echo Session::get('csid'); ?>">Logout</a>
+			<a href="?csid=<?php echo Session::get('csid'); ?>">Déconnexion</a>
 
 		<?php }else{  ?>
 			<a href="login.php">Login</a>
@@ -110,12 +110,12 @@
  </div>
 <div class="menu">
 	<ul id="dc_mega-menu-orange" class="dc_mm-orange">
-	  <li><a href="index.php">Home</a></li>
+	  <li><a href="index.php">Accueil</a></li>
 	 <!--  <li><a href="topbrands.php">Top Brands</a></li> -->
 	   <?php
 	  	$ckCompare = $pd->checkCompareData(Session::get('csid'));
 	 	if ($ckCompare) { ?>
-		    <li><a href="compare.php">Compare</a></li>
+		    <li><a href="compare.php">Comparaison</a></li>
 	 	<?php } ?>
 
 	 	 <?php
@@ -127,21 +127,21 @@
 	 	<?php 
 	 	$chkCart = $ct->checkCartTable();
 	 	if ($chkCart) { ?>
-	 		<li><a href="cart.php">Cart</a></li>
-	 		<li><a href="payment.php">Payment</a></li>
+	 		<li><a href="cart.php">Panier</a></li>
+	 		<li><a href="payment.php">Paiement</a></li>
 	 	<?php } ?>
 	  
 	  <?php 
 	  	$csid = Session::get('csid');
 	 	$ckorder = $csmr->checkOrder($csid);
 	 	if ($ckorder) { ?>
-	 		<li><a href="orderdetails.php">Order</a></li>
+	 		<li><a href="orderdetails.php">Commande</a></li>
 	 	<?php } ?>
 
 	  <?php
 	  	$userlogin = Session::get('cslogin');
 	  	if ($userlogin == true) { ?>
-	  	<li><a href="profile.php">Profile</a></li>
+	  	<li><a href="profile.php">Profil</a></li>
 	  <?php	} ?>
 	  
 	  <li><a href="contact.php">Contact</a> </li>

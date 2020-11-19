@@ -18,7 +18,7 @@
  <div class="main">
     <div class="content">
 		<div class="section group">
-	   			<h2>Your Order Details</h2><br>
+	   			<h2>Vos commandes</h2><br>
 	   			<?php
 	   				if (isset($csConfirm)) {
 	   					echo $csConfirm."<br><br>";
@@ -26,11 +26,11 @@
 	   			?>
 	   				<table class="tblone">
 							<tr>
-								<th>No</th>
-								<th>Product Name</th>
+								<th>N°</th>
+								<th>Nom du produit </th>
 								<th>Image</th>
-								<th>Quantity</th>
-								<th>Price</th>
+								<th>Quantité</th>
+								<th>Prix</th>
 								<th>Date</th>
 								<th>Status</th>
 								<th>Action</th>
@@ -49,14 +49,14 @@
 								<td><?php echo $orderpd['productName'];?></td>
 								<td><img src="admin/<?php echo $orderpd['image'];?>"/></td>
 								<td><?php echo $orderpd['quantity'];?></td>
-								<td>$ <?php echo $orderpd['price'];?></td>
+								<td><?php echo $orderpd['price'];?> €</td>
 								<td><?php echo $fm->formatDate($orderpd['Date']);?></td>
 								<td><?php if($orderpd['status'] == 0){
-									echo "Pendding";
+									echo "En attente";
 								}elseif($orderpd['status'] == 1){
-									echo "Shifted";
+									echo "Retardé";
 								}else{
-									echo "Confirmed";
+									echo "Confirmé";
 								}?></td>
 							<td>
 								<?php

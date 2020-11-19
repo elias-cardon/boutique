@@ -18,7 +18,7 @@
     <div class="content">
     	<div class="cartoption">		
 			<div class="cartpage">
-			    	<h2 style="width:100%;text-align:center">Wishlist Product</h2>
+			    	<h2 style="width:100%;text-align:center">Votre wishlist</h2>
 			    	<?php
 			    		if (isset($delwlist)) {
 			    			echo $delwlist;
@@ -26,11 +26,11 @@
 			    	?>
 						<table class="tblone">
 							<tr>
-								<th>SL</th>
-								<th>Product Name</th>
-								<th>Price</th>
+								<th>N°</th>
+								<th>Nom du produit</th>
+								<th>Prix</th>
 								<th>Image</th>
-								<th>View</th>
+								<th>Voir</th>
 								<th>Action</th>
 							</tr>
 					    <?php
@@ -45,9 +45,9 @@
 								<td><?php echo $cartpd['productName'];?></td>
 								<td>$ <?php echo $cartpd['price'];?></td>
 								<td><img src="admin/<?php echo $cartpd['image'];?>" alt=""/></td>
-								<td><a href="details.php?pdid=<?php echo $cartpd['productId'];?>">View</a></td>
+								<td><a href="details.php?pdid=<?php echo $cartpd['productId'];?>">Voir</a></td>
 								<td>
-									<a href="details.php?pdid=<?php echo $cartpd['productId'];?>">Buy Now</a> || <a href="?wlistid=<?php echo $cartpd['productId'];?>">Remove</a>	
+									<a href="details.php?pdid=<?php echo $cartpd['productId'];?>">Acheter</a> || <a href="?wlistid=<?php echo $cartpd['productId'];?>">Supprimer</a>	
 								</td>
 							</tr>
 

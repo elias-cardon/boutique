@@ -46,7 +46,7 @@ class Product
 		
 		if (empty($productName) or empty($pcategory) or empty($pbrand) or empty($pdescription) or empty($p_price) or empty($ptype) or empty($file_name))
 		{
-			$msg = "<span class='error'>Fields must not be empty !.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide !.</span>";
 			return $msg;
 		}else{
 			//validate uploaded images
@@ -56,7 +56,7 @@ class Product
 			$uploaded_image = "uploads/products/".$unique_image;
 			
 			if ($file_size >1048567) {
-				$msg = "<span class='error'>Product not found !.</span>";
+				$msg = "<span class='error'>Produit pas trouvé !.</span>";
 				return $msg;
 			} elseif (in_array($file_ext, $permited) === false) {
 				echo "<span class='error'>You can upload only:-"
@@ -69,10 +69,10 @@ class Product
 
 				$inserted = $this->db->insert($query);
 				if ($inserted) {
-					$msg = "<span class='success'>Product inserted successfully.</span>";
+					$msg = "<span class='success'>Produit ajouté avec succès !</span>";
 					return $msg;
 				}else{
-					$msg = "<span class='error'>Failed to insert.</span>";
+					$msg = "<span class='error'>Ajout raté ...</span>";
 					return $msg;
 				}
 		 	}
@@ -99,7 +99,7 @@ class Product
 		if ($result) {
 			return $result;
 		}else{
-			$msg = "<span class='error'>Product not found !.</span>";
+			$msg = "<span class='error'>Produit pas trouvé !.</span>";
 			return $msg;
 		}
 	}
@@ -125,10 +125,10 @@ class Product
 		$sql = "DELETE FROM tbl_product WHERE pid='$id'";
 		$result = $this->db->delete($sql);
 		if ($result) {
-			$msg = "<span class='success'>Product Successfully Deleted !.</span>";
+			$msg = "<span class='success'>Produit supprimé avec succès !.</span>";
 			return $msg;
 		}else{
-			$msg = "<span class='error'>Failed to Delete.</span>";
+			$msg = "<span class='error'>Suppression ratée.</span>";
 			return $msg;
 		}
 	}
@@ -161,7 +161,7 @@ class Product
 		
 		if (empty($productName) or empty($pcategory) or empty($pbrand) or empty($pdescription) or empty($p_price) or empty($ptype) )
 		{
-			$msg = "<span class='error'>Fields must not be empty !.</span>";
+			$msg = "<span class='error'>Tous les champs doivent être remplis !.</span>";
 			return $msg;
 		}else{
 
@@ -173,10 +173,10 @@ class Product
 				$uploaded_image = "uploads/products/".$unique_image;
 				
 				if ($file_size >1048567) {
-					$msg = "<span class='error'>Product not found !.</span>";
+					$msg = "<span class='error'>Produit pas trouvé ...</span>";
 					return $msg;
 				} elseif (in_array($file_ext, $permited) === false) {
-					echo "<span class='error'>You can upload only:-"
+					echo "<span class='error'>Vous ne pouvez mettre à jour que :-"
 					.implode(', ', $permited)."</span>";
 				}else{
 					move_uploaded_file($file_temp, $uploaded_image);
@@ -193,10 +193,10 @@ class Product
 
 					$updated = $this->db->update($query);
 					if ($updated) {
-						$msg = "<span class='success'>Product updated successfully.</span>";
+						$msg = "<span class='success'>Produit mise à jour avec succès !</span>";
 						return $msg;
 					}else{
-						$msg = "<span class='error'>Failed to updated.</span>";
+						$msg = "<span class='error'>Mise à jour ratée ...</span>";
 						return $msg;
 					}
 			 	}
@@ -214,10 +214,10 @@ class Product
 
 					$updated = $this->db->update($query);
 					if ($updated) {
-						$msg = "<span class='success'>Product updated successfully.</span>";
+						$msg = "<span class='success'>Produit mis à jour avec succès !</span>";
 						return $msg;
 					}else{
-						$msg = "<span class='error'>Failed to updated.</span>";
+						$msg = "<span class='error'>Mise à jour ratée ...</span>";
 						return $msg;
 					}
 
@@ -292,7 +292,7 @@ class Product
 		$ckSql = "SELECT * FROM tbl_compare WHERE csId='$csid' AND productId='$prodId'";
 		$getCmp = $this->db->select($ckSql);
 		if ($getCmp) {
-			$msg = "<span class='error'>Already added.</span>";
+			$msg = "<span class='error'>Déjà ajouté.</span>";
 				return $msg;
 		}else{
 		$sql = "SELECT * FROM tbl_product WHERE pid = '$prodId' ";
@@ -304,10 +304,10 @@ class Product
 			$query = "INSERT INTO tbl_compare(csId,productId,productName,price,image)VALUES('$csid','$prodId','$productName','$price','$image')";
 				$inserted = $this->db->insert($query);
 				if ($inserted) {
-					$msg = "<span class='success'>Added to Compare.</span>";
+					$msg = "<span class='success'>Produit ajouté avec succès !</span>";
 					return $msg;
 				}else{
-					$msg = "<span class='error'>Failed to Added.</span>";
+					$msg = "<span class='error'>Ajout raté ...</span>";
 					return $msg;
 				}
 			}
@@ -335,7 +335,7 @@ class Product
 		$ckSql = "SELECT * FROM tbl_wishlist WHERE csId='$csid' AND productId='$pdid'";
 		$getwlist = $this->db->select($ckSql);
 		if ($getwlist) {
-			$msg = "<span class='error'>Already added to list.</span>";
+			$msg = "<span class='error'>Déjà ajouté à la liste.</span>";
 				return $msg;
 		}else{
 		$sql = "SELECT * FROM tbl_product WHERE pid = '$pdid' ";
@@ -347,10 +347,10 @@ class Product
 			$query = "INSERT INTO tbl_wishlist(csId,productId,productName,price,image)VALUES('$csid','$pdid','$productName','$price','$image')";
 				$inserted = $this->db->insert($query);
 				if ($inserted) {
-					$msg = "<span class='success'>Added ! Check wishlist page.</span>";
+					$msg = "<span class='success'>Produit ajouté ! Vous pouvez aller voir votre wishlist.</span>";
 					return $msg;
 				}else{
-					$msg = "<span class='error'>Failed to Added.</span>";
+					$msg = "<span class='error'>Ajout raté.</span>";
 					return $msg;
 				}
 			}
@@ -367,10 +367,10 @@ class Product
 		$sql = "DELETE FROM tbl_wishlist WHERE csId = '$csid' AND productId='$pdid'";
 		$result = $this->db->delete($sql);
 		if ($result) {
-			$msg = "<span class='success'>Wishlist product deleted.</span>";
+			$msg = "<span class='success'>Produit supprimé avec succès !</span>";
 			return $msg;
 		}else{
-			$msg = "<span class='error'>Failed to delete.</span>";
+			$msg = "<span class='error'>Suppression ratée ...</span>";
 			return $msg;
 		}
 	}

@@ -37,10 +37,9 @@
     <div class="content">
 		<div class="section group">
 	   		<div class="payment">
-	   			<h2>Choose a payment method</h2><br>
-	   			<a href="payoffline.php">Offline Payment</a>
-	   			<a href="bank.php">Online Payment</a><br><br><br>
-	   			<h3><a href="cart.php">Previous</a></h3>
+	   			<h2>Choisissez ce que vous voulez faire</h2><br>
+	   			<a href="payoffline.php">Payer</a>
+	   			<a href="cart.php">Revenir</a><br><br><br>
 	   		</div>
 		</div>
        <div class="clear"></div>

@@ -11,12 +11,12 @@
     <div class="content">
     	<div class="cartoption">		
 			<div class="cartpage">
-			    	<h2 style="width:100%;text-align:center">Compare Product</h2>
+			    	<h2 style="width:100%;text-align:center">Comparaison</h2>
 						<table class="tblone">
 							<tr>
-								<th>SL</th>
-								<th>Product Name</th>
-								<th>Price</th>
+								<th>N°</th>
+								<th>Nom du produit</th>
+								<th>Prix</th>
 								<th>Image</th>
 								<th>Action</th>
 							</tr>
@@ -30,7 +30,7 @@
 							<tr>
 								<td><?php echo $i?></td>
 								<td><?php echo $cartpd['productName'];?></td>
-								<td>$ <?php echo $cartpd['price'];?></td>
+								<td><?php echo $cartpd['price'];?> €</td>
 								<td><img src="admin/<?php echo $cartpd['image'];?>" alt=""/></td>
 								<td><a href="details.php?pdid=<?php echo $cartpd['productId'];?>">View</a></td>
 		

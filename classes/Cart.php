@@ -32,7 +32,7 @@ class Cart
 		$cksql  = "SELECT * FROM tbl_cart WHERE productId = '$pdid' AND sessionId = '$sid'";
 		$ckpd = $this->db->select($cksql);
 		if ($ckpd) {
-			$msg = "<span class='error'>Product already added to Cart.</span>";
+			$msg = "<span class='error'>Produit déjà dans le panier.</span>";
 			return $msg;
 		}else{
 			$insertSql = "INSERT INTO tbl_cart(sessionId, productId, productName, price, quantity, image) VALUES('$sid', '$pdid', '$productName','$price','$quant', '$image')";
@@ -62,7 +62,7 @@ class Cart
 		if ($updated) {
 			header("Location: cart.php");
 		}else{
-			$msg = "<span class='error'>Cart not updated.</span>";
+			$msg = "<span class='error'>Panier pas mis à jour.</span>";
 			return $msg;
 		}
 	}
