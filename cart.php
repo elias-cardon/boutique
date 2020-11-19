@@ -26,7 +26,7 @@
     <div class="content">
     	<div class="cartoption">		
 			<div class="cartpage">
-			    	<h2>Your Cart</h2>
+			    	<h2>Votre panier</h2>
 			    	<span style="color:green">
 			    	<?php 
 			    		if (isset($deleteCart)) {
@@ -43,12 +43,12 @@
 				    </span><br><br>
 						<table class="tblone">
 							<tr>
-								<th width="5%">Serial</th>
-								<th width="20%">Product Name</th>
+								<th width="5%">N°</th>
+								<th width="20%">Nom du produit</th>
 								<th width="20%">Image</th>
-								<th width="15%">Price</th>
-								<th width="25%">Quantity</th>
-								<th width="20%">Total Price</th>
+								<th width="15%">Prix</th>
+								<th width="25%">Quantité</th>
+								<th width="20%">Prix total HT</th>
 								<th width="10%">Action</th>
 							</tr>
 					    <?php
@@ -96,19 +96,19 @@
 						?>
 						<table style="float:right;text-align:left;" width="40%">
 							<tr>
-								<th>Sub Total : </th>
-								<td>€ <?php echo $sum; ?></td>
+								<th>Total HT : </th>
+								<td> <?php echo $sum; ?> €</td>
 							</tr>
 							<tr>
-								<th>VAT :</th>
-								<th> 10% </th>
+								<th>TVA :</th>
+								<th> 20% </th>
 							</tr>
 							<tr>
-								<th>Grand Total :</th>
-								<td>€ <?php 
-									$vat = ($sum*10)/100; 
+								<th>Total TTC :</th>
+								<td> <?php 
+									$vat = ($sum*20)/100; 
 									echo $grandTotal = $sum+$vat;
-								?></td>
+								?> €</td>
 							</tr>
 					   </table>
 					   <?php
