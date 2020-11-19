@@ -21,7 +21,7 @@
 					 <a href="details.php?pdid=<?php echo $fpd['pid'];?>"><img src="admin/<?php echo $fpd['image']; ?>" alt="" /></a>
 					 <h2><?php echo $fpd['productName'];?></h2>
 					 <p><?php echo $fm->textShorten($fpd['body'], 50);?></p>
-					 <p><span class="price">$ <?php echo $fpd['price'];?></span></p>
+					 <p><span class="price"><?php echo $fpd['price'];?> €</span></p>
 				     <div class="button"><span><a href="details.php?pdid=<?php echo $fpd['pid'];?>" class="details">Details</a></span></div>
 				</div>
 			<?php

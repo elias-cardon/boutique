@@ -63,7 +63,7 @@
 								<td><?php echo $i?></td>
 								<td><?php echo $cartpd['productName'];?></td>
 								<td><img src="admin/<?php echo $cartpd['image'];?>" alt=""/></td>
-								<td>$ <?php echo $cartpd['price'];?></td>
+								<td><?php echo $cartpd['price'];?> €</td>
 								<td>
 					<form action="" method="post">
 						<input type="hidden" name="cartid" value="<?php echo $cartpd['cartId'];?>"/>

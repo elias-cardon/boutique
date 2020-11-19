@@ -58,7 +58,7 @@ class Brand
 		$sql = "DELETE FROM tbl_brand WHERE brandId='$delid'";
 		$result = $this->db->delete($sql);
 		if ($result) {
-			$msg = "<span class='error'>Suppression réussie !.</span>";
+			$msg = "<span class='error'>Suppression réussie !</span>";
 			return $msg;
 		}else{
 			$msg = "<span class='error'>Suppression ratée ...</span>";
@@ -82,7 +82,7 @@ class Brand
 			$sql = "UPDATE tbl_brand SET brandName = '$brandname' WHERE brandId='$brandid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
-				$msg = "<span class='success'>Mise à jour réussie !.</span>";
+				$msg = "<span class='success'>Mise à jour réussie !</span>";
 				return $msg;
 			}else{
 				$msg = "<span class='error'>Mise à jour ratée ...</span>";

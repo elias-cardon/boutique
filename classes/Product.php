@@ -59,7 +59,7 @@ class Product
 				$msg = "<span class='error'>Produit pas trouvé !.</span>";
 				return $msg;
 			} elseif (in_array($file_ext, $permited) === false) {
-				echo "<span class='error'>You can upload only:-"
+				echo "<span class='error'>Vous ne pouvez mettre à jour que:-"
 				.implode(', ', $permited)."</span>";
 			}else{
 				move_uploaded_file($file_temp, $uploaded_image);

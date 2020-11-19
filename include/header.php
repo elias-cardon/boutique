@@ -100,7 +100,7 @@
 			<a href="?csid=<?php echo Session::get('csid'); ?>">Déconnexion</a>
 
 		<?php }else{  ?>
-			<a href="login.php">Login</a>
+			<a href="login.php">Connexion</a>
 	   <?php } ?>
 		   
 		   </div>
