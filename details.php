@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <?php
 	if (isset($_GET['pdid'])) {
@@ -117,5 +117,5 @@
 	</div>
 
 <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>

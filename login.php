@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <?php
 	$login = Session::get('cslogin');
@@ -91,5 +91,5 @@
 </div>
 
 <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>

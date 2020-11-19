@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <?php
 	if (!isset($_GET['catid']) && $_GET['catid'] == NULL) {
@@ -47,5 +47,5 @@
 </div>
  
  <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>
