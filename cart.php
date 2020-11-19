@@ -97,7 +97,7 @@
 						<table style="float:right;text-align:left;" width="40%">
 							<tr>
 								<th>Sub Total : </th>
-								<td>€. <?php echo $sum; ?></td>
+								<td>€ <?php echo $sum; ?></td>
 							</tr>
 							<tr>
 								<th>VAT :</th>
@@ -105,7 +105,7 @@
 							</tr>
 							<tr>
 								<th>Grand Total :</th>
-								<td>€. <?php 
+								<td>€ <?php 
 									$vat = ($sum*10)/100; 
 									echo $grandTotal = $sum+$vat;
 								?></td>
