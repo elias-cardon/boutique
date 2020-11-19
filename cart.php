@@ -26,7 +26,7 @@
     <div class="content">
     	<div class="cartoption">		
 			<div class="cartpage">
-			    	<h2>Votre panier</h2>
+			    	<h2>Le panier</h2>
 			    	<span style="color:green">
 			    	<?php 
 			    		if (isset($deleteCart)) {
