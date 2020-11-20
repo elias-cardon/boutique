@@ -75,7 +75,7 @@
 									if ($getData) {
 										$sum = Session::get("cart");
 										$qty = Session::get("qty");
-											echo "$ ".$sum." ~ Qty: ".$qty;
+											echo "Qté: " .$qty. " ~ ".$sum." €";
 									}else{
 										echo "(Vide)";
 									}
