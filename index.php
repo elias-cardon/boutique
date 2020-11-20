@@ -34,7 +34,7 @@
 			</div>
 			<div class="content_bottom">
     		<div class="heading">
-    		<h3>Nouvelle arrivage</h3>
+    		<h3>Nouveaux arrivages</h3>
     		</div>
     		<div class="clear"></div>
     	</div>
