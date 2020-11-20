@@ -7,7 +7,7 @@
     <div class="content">
     	<div class="content_top">
     		<div class="heading">
-    		<h3>En tête de liste</h3>
+    		<h3>Nos produits phares</h3>
     		</div>
     		<div class="clear"></div>
     	</div>
