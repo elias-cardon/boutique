@@ -77,7 +77,7 @@ Session::checkSession();
                 <li class="ic-dashboard"><a href="index.php"><span>Dashboard</span></a> </li>
                
 				<li class="ic-grid-tables"><a href="inbox.php"><span>Boîte de réception</span></a></li>
-                   <li class="ic-charts"><a href="http://localhost/ESHOP/shop/index.php" target="_blank"><span>Visiter le site</span></a></li>
+                   <li class="ic-charts"><a href="http://localhost/boutique/index.php target="_blank"><span>Visiter le site</span></a></li>
             </ul>
         </div>
         <div class="clear">
