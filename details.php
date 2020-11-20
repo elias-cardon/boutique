@@ -42,7 +42,7 @@
 					</div>
 				<div class="desc span_3_of_2">
 					<h2><?php echo $row['productName'];?></h2>
-					<p><?php echo $fm->textShorten($row['body'],100);?></p>					
+			
 					<div class="price">
 						<p>Prix : <span><?php echo $row['price'];?> €</span></p>
 						<p>Catégorie : <span><?php echo $row['catName'];?></span></p>
