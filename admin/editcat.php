@@ -9,7 +9,7 @@ include "../classes/Category.php";
     }else{
         $catid = $_GET['catid'];
     }
-    //creating object of Category class
+    //creat object of Category class
     $cat = new Category();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
