@@ -23,16 +23,16 @@ class Category
 		$catname = mysqli_real_escape_string($this->db->link, $catname);
 
 		if (empty($catname)) {
-			$msg = "<span class='error'>Category field must not be empty.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide.</span>";
 			return $msg;
 		}else{
 			$sql = "INSERT INTO tbl_category(catName) VALUES('$catname')";
 			$inserted = $this->db->insert($sql);
 			if ($inserted) {
-				$msg = "<span class='success'>Category inserted successfully.</span>";
+				$msg = "<span class='success'>Categorie ajoutée avec succès !</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Failed to insert.</span>";
+				$msg = "<span class='error'>Ajout ratée ...</span>";
 				return $msg;
 			}
 		}
@@ -58,10 +58,10 @@ class Category
 		$sql = "DELETE FROM tbl_category WHERE catId='$delid'";
 		$result = $this->db->delete($sql);
 		if ($result) {
-			$msg = "<span class='error'>Successfully Deleted !.</span>";
+			$msg = "<span class='error'>Suppression réussie !</span>";
 			return $msg;
 		}else{
-			$msg = "<span class='error'>Failed to Delete.</span>";
+			$msg = "<span class='error'>Suppression ratée ...</span>";
 			return $msg;
 		}
 
@@ -76,16 +76,16 @@ class Category
 		//var_dump($catname, $catid);
 
 		if (empty($catname) || empty($catid)) {
-			$msg = "<span class='error'>Category field must not be empty.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide.</span>";
 			return $msg;
 		}else{
 			$sql = "UPDATE tbl_category SET catName = '$catname' WHERE catId='$catid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
-				$msg = "<span class='success'>Successfully Updated !.</span>";
+				$msg = "<span class='success'>Mise à jour réussie !.</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Filed to Update !.</span>";
+				$msg = "<span class='error'>Mise à jour ratée ...</span>";
 				return $msg;
 			}
 		}

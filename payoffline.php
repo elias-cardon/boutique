@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <?php
 	$login = Session::get('cslogin');
@@ -51,11 +51,12 @@
 	   		<div class="division">
 	   			<!-- Cart info -->
 	   				<table class="tblone">
+	   					<tr><td colspan='3'><h2 style="text-align:center">Les détails de votre commande</h2></td></tr>
 							<tr>
-								<th width="5%">No</th>
-								<th width="20%">Product Name</th>
-								<th width="15%">Price</th>
-								<th width="25%">Quantity</th>
+								<th width="5%">N°</th>
+								<th width="20%">Nom du produit</th>
+								<th width="15%">Prix</th>
+								<th width="25%">Quantité</th>
 								<th width="20%">Total</th>
 
 							</tr>
@@ -91,19 +92,19 @@
 						<!-- grand total table -->
 						<table class="tbl_two" style="float:right;text-align:left;" width="50%">
 							<tr>
-								<th>Sub Total : </th>
-								<td>TK. <?php echo $sum; ?></td>
+								<th>Total HT : </th>
+								<td><?php echo $sum; ?> €</td>
 							</tr>
 							<tr>
-								<th>VAT :</th>
-								<th> 10% </th>
+								<th>TVA :</th>
+								<th> 20% </th>
 							</tr>
 							<tr>
 								<th>Grand Total :</th>
-								<td>TK. <?php 
-									$vat = ($sum*10)/100; 
+								<td><?php 
+									$vat = ($sum*20)/100; 
 									echo $grandTotal = $sum+$vat;
-								?></td>
+								?> €</td>
 							</tr>
 								<th>Quantity :</th>
 								<th> <?php echo $qty; ?></th>
@@ -121,19 +122,19 @@
 
 		?>
 			<table class="tblone">
-				<tr><td colspan='3'><h2 style="text-align:center">Your profile details</h2></td></tr>
+				<tr><td colspan='3'><h2 style="text-align:center">Vos informations</h2></td></tr>
 				<tr>
-					<td>Name</td>
+					<td>Nom</td>
 					<td>:</td>
 					<td><?php echo $row['name'];?></td>
 				</tr>
 				<tr>
-					<td>City</td>
+					<td>Ville</td>
 					<td>:</td>
 					<td><?php echo $row['city'];?></td>
 				</tr>
 				<tr>
-					<td>Zip</td>
+					<td>Code postal</td>
 					<td>:</td>
 					<td><?php echo $row['zip'];?></td>
 				</tr>
@@ -143,21 +144,21 @@
 					<td><?php echo $row['email'];?></td>
 				</tr>
 				<tr>
-					<td>Address</td>
+					<td>Adresse</td>
 					<td>:</td>
 					<td><?php echo $row['address'];?></td>
 				</tr>
 				<tr>
-					<td>Country</td>
+					<td>Pays</td>
 					<td>:</td>
 					<td><?php echo $row['country'];?></td>
 				</tr>
 				<tr>
-					<td>Phone</td>
+					<td>Téléphone</td>
 					<td>:</td>
 					<td><?php echo $row['phone'];?></td>
 				</tr>
-				<tr><td colspan='3'><h2 style="text-align:center"><button ><a href="editprofile.php">Edit profile</a></button></h2></td></tr>
+				<tr><td colspan='3'><h2 style="text-align:center"><button ><a href="editprofile.php">Modifier votre profil</a></button></h2></td></tr>
 			</table>
 
 			<?php } }?>
@@ -165,7 +166,7 @@
 	   		</div>
 		</div>
 		<div class="ordernow">
-			<a href="?orderid=order">Order Now</a>
+			<a href="?orderid=order">Commander</a>
 		</div>
        <div class="clear"></div>
     </div>
@@ -173,5 +174,5 @@
 </div>
 
  <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>

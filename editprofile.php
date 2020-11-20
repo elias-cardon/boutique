@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <?php
 	$login = Session::get('cslogin');
@@ -37,36 +37,36 @@
 
 			<table class="tblone">
 				<tr>
-					<td colspan='3'><h2>Update your profile information</h2></td>
+					<td colspan='3'><h2>Mise à jour de vos données personnelles</h2></td>
 					
 				</tr>
 				<tr>
-					<td>Name</td>
+					<td>Nome</td>
 					<td>:</td>
 					<td><input type="text" name='name' value="<?php echo $row['name'];?>"></td>
 				</tr>
 				<tr>
-					<td>City</td>
+					<td>Ville</td>
 					<td>:</td>
 					<td><input type="text" name='city' value="<?php echo $row['city'];?>"></td>
 				</tr>
 				<tr>
-					<td>Zip</td>
+					<td>Code postale</td>
 					<td>:</td>
 					<td><input type="text" name='zip' value="<?php echo $row['zip'];?>"></td>
 				</tr>
 				<tr>
-					<td>Address</td>
+					<td>Adresse</td>
 					<td>:</td>
 					<td><input type="text" name='address' value="<?php echo $row['address'];?>"></td>
 				</tr>
 				<tr>
-					<td>Country</td>
+					<td>Pays</td>
 					<td>:</td>
 					<td><input type="text" name='country' value="<?php echo $row['country'];?>"></td>
 				</tr>
 				<tr>
-					<td>Phone</td>
+					<td>Téléphone</td>
 					<td>:</td>
 					<td><input type="text" name='phone' value="<?php echo $row['phone'];?>"></td>
 					
@@ -94,5 +94,5 @@
 </div>
 
  <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>

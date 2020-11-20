@@ -21,10 +21,9 @@ if (isset($_POST['submit'])) {
             $query = mysqli_query($db, $request);
             $test_login = mysqli_fetch_array($query);
 
-            if (!empty($test_login))
-            {
-            echo "Cet email existe déjà ! Veuillez en choisir un autre.";
-            }else{
+            if (!empty($test_login)) {
+                echo "Cet email existe déjà ! Veuillez en choisir un autre.";
+            } else {
                 $query = mysqli_query($db, "INSERT INTO utilisateurs (login, prenom, nom,  email, password, admin) VALUES('$login', '$prenom', '$nom', '$email', '$password','1');");
 
                 die("Inscription terminée. <a href='connexion.php'>Connectez-vous</a>.");
@@ -54,7 +53,7 @@ if (isset($_POST['submit'])) {
     ?>
 </header>
 <main>
-	<form method="post" action="inscription.php">
+    <form method="post" action="inscription.php">
         <p>Login</p>
         <input class="input" type="text" name="login">
         <p>Votre prénom</p>
@@ -71,7 +70,7 @@ if (isset($_POST['submit'])) {
     </form>
 </main>
 <footer>
-	<?php
+    <?php
     require_once('include/footer.php');
     ?>
 </footer>

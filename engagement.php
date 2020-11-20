@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Nos engagements</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -115,11 +116,13 @@
 
                 <p class="card-text">Devant le développement des nouveaux outils de communication, il est nécessaire de
                     porter une attention particulière à la protection de la vie privée. C'est pourquoi nous nous
-                    engageons à respecter la confidentialité des renseignements personnels que nous collectons.<br/><br/>
+                    engageons à respecter la confidentialité des renseignements personnels que nous
+                    collectons.<br/><br/>
 
 
                     Les renseignements personnels que nous collectons sont conservés dans un environnement sécurisé. Les
-                    personnes travaillant pour nous sont tenues de respecter la confidentialité de vos informations.<br/><br/>
+                    personnes travaillant pour nous sont tenues de respecter la confidentialité de vos
+                    informations.<br/><br/>
 
                     Pour assurer la sécurité de vos renseignements personnels, nous avons recours aux mesures suivantes
                     :<br/><br/>

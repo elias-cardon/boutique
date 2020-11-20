@@ -56,7 +56,7 @@ if (isset($_SESSION['login'])) {
 <body>
 <!-- Header -->
 <header>
-    
+
 </header>
 
 <!-- Main -->

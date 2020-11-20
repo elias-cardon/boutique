@@ -1,11 +1,11 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
  <div class="main">
     <div class="content">
     	<div class="support">
   			<div class="support_desc">
-  				<h3>Live Support</h3>
+  				<h3>Contact</h3>
   				
   			</div>
   				<img src="web/images/contact.png" alt="" />
@@ -14,26 +14,26 @@
     	<div class="section group">
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-				  	<h2>Contact Us</h2>
+				  	<h2>Contactez-nous</h2>
 					    <form>
 					    	<div>
-						    	<span><label>NAME</label></span>
+						    	<span><label>Nom</label></span>
 						    	<span><input type="text" value=""></span>
 						    </div>
 						    <div>
-						    	<span><label>E-MAIL</label></span>
+						    	<span><label>E-mail</label></span>
 						    	<span><input type="text" value=""></span>
 						    </div>
 						    <div>
-						     	<span><label>MOBILE.NO</label></span>
+						     	<span><label>Numéro de téléphone</label></span>
 						    	<span><input type="text" value=""></span>
 						    </div>
 						    <div>
-						    	<span><label>SUBJECT</label></span>
+						    	<span><label>Sujet</label></span>
 						    	<span><textarea> </textarea></span>
 						    </div>
 						   <div>
-						   		<span><input type="submit" value="SUBMIT"></span>
+						   		<span><input type="submit" value="Envoyer"></span>
 						  </div>
 					    </form>
 				  </div>
@@ -56,5 +56,5 @@
 </div>
 
 <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>

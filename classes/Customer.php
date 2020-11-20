@@ -42,22 +42,22 @@ class Customer
 	    //check empty value
 	    if (empty($name) or empty($city) or empty($zip) or empty($email) or empty($address) or empty($country) or empty($phone) or empty($pass))
 		{
-			$msg = "<span class='error'>Fields must not be empty !.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide !</span>";
 			return $msg;
 		}
 		$ckemail = "SELECT * FROM tbl_customer WHERE email='$email'";
 		$result = $this->db->select($ckemail);
 		if ($result != false) {
-			$msg = "<span class='error'>This email already registered !.</span>";
+			$msg = "<span class='error'>Cette adresse email est déjà utilisée !.</span>";
 			return $msg;
 		}else{
 			 $sql = "INSERT INTO tbl_customer(name,city,zip,email,address,country,phone,pass) VALUES('$name','$city','$zip','$email','$address','$country','$phone','$pass')";
 		    $inserted = $this->db->insert($sql);
 		    if ($inserted) {
-		    	$msg = "<span class='success'>Customer Registered successfully !.</span>";
+		    	$msg = "<span class='success'>Inscription réussie !</span>";
 			    return $msg;
 		    }else{
-		    	$msg = "<span class='error'>Registration failed !.</span>";
+		    	$msg = "<span class='error'>Inscription ratée !</span>";
 				return $msg;
 		    }
 		}
@@ -71,7 +71,7 @@ class Customer
 	    $pass = mysqli_real_escape_string($this->db->link, $pass);
 	    if (empty($email) or empty($pass))
 		{
-			$msg = "<span class='error'>Fields must not be empty !.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide !</span>";
 			return $msg;
 		}else{
 			$sql = "SELECT * FROM tbl_customer WHERE email='$email' AND pass='$pass'";
@@ -83,7 +83,7 @@ class Customer
 				Session::set("csname",$value['name']);
 				header("Location: cart.php");
 			}else{
-				$msg = "<span class='error'>email or password not matched !.</span>";
+				$msg = "<span class='error'>L'email ou le mot de passe ne correspond pas !</span>";
 				return $msg;
 			}
 		}
@@ -115,7 +115,7 @@ class Customer
 	    //check empty value
 	    if (empty($name) or empty($city) or empty($zip) or empty($address) or empty($country) or empty($phone))
 		{
-			$msg = "<span class='error'>Fields must not be empty !.</span>";
+			$msg = "<span class='error'>Aucun champs ne doit être vide !</span>";
 			return $msg;
 		}else{
 			$sql = "UPDATE tbl_customer
@@ -129,10 +129,10 @@ class Customer
 					 WHERE csId='$cid' ";
 			$result = $this->db->update($sql);
 			if ($result) {
-				$msg = "<span class='success'>Profile Successfully Updated !.</span>";
+				$msg = "<span class='success'>Profil modifié avec succéès !</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Filed to Update !.</span>";
+				$msg = "<span class='error'>Mise à jour ratée ...</span>";
 				return $msg;
 			}
 		}
@@ -189,10 +189,10 @@ class Customer
 					 WHERE csId='$id' AND price='$price' AND Date='$time' ";
 			$result = $this->db->update($sql);
 			if ($result) {
-				$msg = "<span class='success'>Order shifted Successfully !.</span>";
+				$msg = "<span class='success'>Order shifted Successfully !</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Filed to Update !.</span>";
+				$msg = "<span class='error'>Mise à jour ratée ...</span>";
 				return $msg;
 			}
 	}
@@ -201,10 +201,10 @@ class Customer
 		$sql = "DELETE FROM tbl_order WHERE csId='$id' AND price='$price' AND Date='$time'";
 		$result = $this->db->delete($sql);
 		if ($result) {
-			$msg = "<span class='error'>Confirmed Order Successfully Deleted !.</span>";
+			$msg = "<span class='error'>Confirmed Order Successfully Deleted !</span>";
 			return $msg;
 		}else{
-			$msg = "<span class='error'>Failed to Delete.</span>";
+			$msg = "<span class='error'>Suppression ratée ...</span>";
 			return $msg;
 		}
 	}
@@ -216,10 +216,10 @@ class Customer
 					 WHERE csId='$id' AND price='$price' AND Date='$time' ";
 			$result = $this->db->update($sql);
 			if ($result) {
-				$msg = "<span class='success'>Thanks for Confirm the order !.</span>";
+				$msg = "<span class='success'>Merci d'avoir finaliser la commande !</span>";
 				return $msg;
 			}else{
-				$msg = "<span class='error'>Filed to confirm !.</span>";
+				$msg = "<span class='error'>Confirmation ratée ...</span>";
 				return $msg;
 			}
 	}

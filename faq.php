@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>FAQ</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -64,7 +65,6 @@
                         poste pour savoir si votre colis n'est pas en attente là-bas.</p>
                 </div>
 
-                
 
                 <div class="col-md-6 col-lg-4 mb-4">
                     <h5 class="font-weight-normal mb-3">Ma commande a été séparée en deux paquets mais je n'en ai reçu
@@ -85,7 +85,7 @@
                         bon sens que vous appliquez lorsque vous voyagez dans un pays dont vous ne connaissez pas la
                         langue. En cas de doute abstenez-vous de passer commande.</p>
                 </div>
-                
+
                 <div class="col-md-6 col-lg-4 mb-4">
                     <h5 class="font-weight-normal mb-3">Je n'ai pas reçu d'e-mail me prévenant de l'avancée de ma
                         commande, pourquoi ?</h5>
@@ -97,11 +97,13 @@
 
 
                         Si ça n'est pas le cas vérifiez d'abord que vous avez renseigné une adresse e-mail valide lors
-                        de votre inscription sur La Bonne Planque. Vérifiez ensuite que nos messages ne sont pas bloqués par le
+                        de votre inscription sur La Bonne Planque. Vérifiez ensuite que nos messages ne sont pas bloqués
+                        par le
                         filtre anti-spam de votre messagerie.
 
 
-                        À tout moment vous pouvez aussi vérifier sur votre compte La Bonne Planque si votre commande a bien été
+                        À tout moment vous pouvez aussi vérifier sur votre compte La Bonne Planque si votre commande a
+                        bien été
                         validée et expédiée.</p>
                 </div>
 
@@ -140,13 +142,14 @@
                         réclamation passé, aucune demande de dédommagement ne pourra être acceptée.<br/>
 
 
-                        L’assurance La Bonne Planque fonctionne sur un maximum de 3 colis par commande (soit sur les commandes
+                        L’assurance La Bonne Planque fonctionne sur un maximum de 3 colis par commande (soit sur les
+                        commandes
                         dont les frais de port sont égaux ou inférieurs à 62 euros).<br/>
 
 
                         L’assurance ne peut être utilisée qu’une seule fois par commande.</p>
                 </div>
-                
+
             </div>
 
         </section>

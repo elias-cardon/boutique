@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <?php
 	if (isset($_GET['pdid'])) {
@@ -44,14 +44,14 @@
 					<h2><?php echo $row['productName'];?></h2>
 					<p><?php echo $fm->textShorten($row['body'],100);?></p>					
 					<div class="price">
-						<p>Price: <span>$<?php echo $row['price'];?></span></p>
-						<p>Category: <span><?php echo $row['catName'];?></span></p>
-						<p>Brand:<span><?php echo $row['brandName'];?></span></p>
+						<p>Prix : <span><?php echo $row['price'];?> €</span></p>
+						<p>Catégorie : <span><?php echo $row['catName'];?></span></p>
+						<p>Marque : <span><?php echo $row['brandName'];?></span></p>
 					</div>
 					<div class="add-cart">
 						<form action="" method="post">
 							<input type="number" class="buyfield" name="quantity" value="1"/>
-							<input type="submit" class="buysubmit" name="submit" value="Buy Now"/>
+							<input type="submit" class="buysubmit" name="submit" value="Ajouter au panier"/>
 						</form><br>
 						<span style="color:red"><?php 
 							if (isset($addcart)) {
@@ -71,18 +71,18 @@
 					<div class="add-cart">
 						<form action="" method="post">
 							<input type="hidden" name="prodId" value="<?php echo $row['pid']; ?>"/>
-							<input type="submit" class="buysubmit" name="compare" value="Add to Compare"/>
+							<input type="submit" class="buysubmit" name="compare" value="Comparer"/>
 						</form><br>	
 					</div>
 					<div class="add-cart">
 						<form action="" method="post">
-							<input type="submit" class="buysubmit" name="wishlist" value="Save To wishlist"/>
+							<input type="submit" class="buysubmit" name="wishlist" value="Ajouter à la wishlist"/>
 						</form><br>	
 					</div>
 					<?php } ?>
 				</div>
 				<div class="product-desc">
-					<h2>Product Details</h2>
+					<h2>Détails du produit</h2>
 					<p><?php echo $row['body'];?></p>
 			        
 		    	</div>
@@ -95,7 +95,7 @@
 			?>
 
 				<div class="rightsidebar span_3_of_1">
-					<h2>CATEGORIES</h2>
+					<h2>Catégories</h2>
 					<ul>
 						<?php 
 							$allCat = $cat->getAllcat();
@@ -117,5 +117,5 @@
 	</div>
 
 <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>

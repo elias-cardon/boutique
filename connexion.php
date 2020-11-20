@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
                 echo "Impossible de vous authentifier correctement.";
             }
         }
-    }else {
+    } else {
         echo "Veuillez saisir tous les champs.";
     }
 }
@@ -35,7 +35,6 @@ session_write_close();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-
 
 
     <link rel="stylesheet" type="text/css" href="src/css/style.css">

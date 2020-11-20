@@ -1,5 +1,5 @@
 <?php
-	include("inc/header.php");
+	include("include/header.php");
 ?>
 <style>
 .errpage{
@@ -13,7 +13,7 @@
 		<div class="section group">
 			<div class="errpage">
 				<h1>404</h1>
-				<h2>Product not found</h2>
+				<h2>Produit non trouvé ...</h2>
 			</div>
 		</div>
        <div class="clear"></div>
@@ -22,5 +22,5 @@
 </div>
 
  <?php
-	include("inc/footer.php");
+	include("include/footer.php");
 ?>
