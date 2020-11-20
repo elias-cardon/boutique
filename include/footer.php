@@ -6,7 +6,7 @@
 				</div>
 			</div>
 			<div class="copy_right">
-				<p>Le Bazaaar &copy; Tous droits réservés </p>
+				<p>La Bonne Planque &copy; Tous droits réservés </p>
 		   </div>
      </div>
     </div>
