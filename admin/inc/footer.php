@@ -5,7 +5,7 @@
     </div>
     <div id="site_info">
         <p>
-         &copy; Copyright <a href="#">Le Bazaaar</a>. Tous droits réservés.
+         &copy; Copyright <a href="#">La Bonne Planque</a>. Tous droits réservés.
         </p>
     </div>
 </body>
