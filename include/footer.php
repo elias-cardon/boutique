@@ -1,45 +1,251 @@
-</div>
-   <div class="footer">
-   	  <div class="wrapper">	
-	     <div class="section group">
-				
-				</div>
-			</div>
-			<div class="copy_right">
-				<p>La Bonne Planque &copy; Tous droits réservés </p>
-		   </div>
-     </div>
-    </div>
-    <script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			var defaults = {
-	  			containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-	 		};
-			*/
-			
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			
-		});
-	</script>
-    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-    <link href="css/flexslider.css" rel='stylesheet' type='text/css' />
-	  <script defer src="js/jquery.flexslider.js"></script>
-	  <script type="text/javascript">
-		$(function(){
-		  SyntaxHighlighter.all();
-		});
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
-		});
-	  </script>
-</body>
-</html>
+<footer>
+  <nav class="footer-inner">
+    <section class="footer-item">
+      <h1>La Bonne Planque</h1>
+      
+      <h2>Nous créons des possibilités <br>pour le monde connecté.<br><b class="color">Soyez audacieux.</b></h2>
+    </section>
+        
+    <section class="footer-item">
+      <h3>Explore</h3>
+        <ul>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Capabilities</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+    </section>
+          
+    <section class="footer-item">
+      <h3>Visit</h3>
+        <a href="#">
+        <p>Envoy So. California</p>
+        <p>34 Tesla, Ste 100</p>
+        <p>Irvine, Ca, USA 92618</p>
+        </a>
+            
+      <h3 class="desktop">New Business</h3>
+        <p class="desktop"><a href="#">engage@weareenvoy.com</a></p>
+        <p class="desktop"><a href="#">949.333.3106</a></p>
+    </section>
+            
+    <section class="footer-item">
+      <h3>New Business</h3>
+        <p><a href="#">Email us</a></p>
+        <p><a href="#">949.333.3106</a></p>
+    </section>
+        
+    <section class="footer-item">
+      <h3>Follow</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </section>
+        
+    <section class="footer-item">
+      <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+    </section>
+  </nav>
+</footer>
+
+<style>
+	footer {
+    background-color: black;
+    font-family: "Lato", sans-serif;
+    padding: 85px 0 285px 0;
+}
+
+.footer-inner {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 120px;
+    max-width: 1170px;
+    position: relative;
+}
+
+.footer-item {
+    float: left;
+    margin: 0 7.2% 0 0;
+}
+
+.footer-item:nth-of-type(4) {
+    display: none;
+}
+
+.footer-item:nth-of-type(7) {
+    float: right;
+    margin-right: 0;
+}
+
+.footer-button {
+    color: white;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 1s;
+    transition-delay: .2s;
+    padding: 14px;
+}
+  
+.footer-button:after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 13px;
+    background-color: white;
+    height: 1px;
+    width: 86px;
+    transition: .6s;
+}
+  
+.footer-button:hover {
+    color: black;
+    background-color: white;
+}
+  
+.footer-button:hover:after {
+    width: 112px;
+    right: 0px;
+}
+
+h1 {
+    font-weight: 900;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+  
+h2 {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 13px;
+    color: #d1d1d1;
+    letter-spacing: 0.03em;
+    padding: 15px 0 0 0;
+}
+  
+.color {
+    color: white;
+    font-weight: 400;
+}
+  
+h3 {
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    margin: 0;
+    padding-bottom: 9px;
+    letter-spacing: 0.03em;
+}
+
+h3.desktop {
+    padding-top: 30px;
+}
+  
+ul {
+    line-height: 1.8;
+    list-style-type: none;
+    padding: 0;
+}
+  
+li {
+    font-weight: 300;
+    font-size: 13px;
+    color: #d1d1d1;
+    letter-spacing: 0.03em;
+}
+  
+p {
+    font-weight: 300;
+    font-size: 13px;
+    padding: 0;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+}
+  
+a {
+    text-decoration: none;
+    color: #d1d1d1;
+}
+  
+a:hover {
+    color: white;
+}
+  
+.desktop {
+    display: auto;
+}
+
+.footer-inner:after {
+    content: "© 2020 Envoy. All Rights Reserved.";
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    color: #d1d1d1;
+    position: absolute;
+    top: 260px;
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+  
+footer {
+    padding: 50px 0 70px 0 !important;
+}
+
+.footer-inner {
+    border-bottom: 1px solid #333;
+    padding-bottom: 490px;
+    margin-bottom: 50px;
+}
+
+.footer-item {
+    margin: 0 0 42px 0;
+    width: 50%;
+}
+
+.footer-item:nth-of-type(1) {
+    border-bottom: 1px solid #333;
+    padding-bottom: 32px;
+    float: none;
+    width: 100%;
+}
+
+.footer-item:nth-of-type(2) {
+    clear: both;
+}
+
+.footer-item:nth-of-type(4) {
+    clear: both;
+    display: block;
+}
+
+.footer-item:nth-of-type(6) {
+    clear: both;
+}
+
+.footer-item:nth-of-type(7) {
+    clear: both;
+    float: left;
+    margin: 20px 0 0 -13px;
+}
+
+.desktop {
+    display: none;
+}
+
+.footer-inner:after {
+    top: 730px;
+}
+}
+</style>

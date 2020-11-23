@@ -229,13 +229,13 @@ class Product
 
 	//get All Featured Product from product table
 	public function getFeaturedProduct(){
-		$sql = "SELECT * FROM tbl_product WHERE type = '1' ORDER BY pid DESC LIMIT 4";
+		$sql = "SELECT * FROM tbl_product WHERE type = '1' ORDER BY pid DESC LIMIT 10";
 		$result = $this->db->select($sql);
 		return $result;
 	}
 	//get all new product
 	public function getNewProduct(){
-		$sql = "SELECT * FROM tbl_product ORDER BY pid DESC LIMIT 4";
+		$sql = "SELECT * FROM tbl_product ORDER BY pid DESC LIMIT 10";
 		$result = $this->db->select($sql);
 		return $result;
 	}
