@@ -52,21 +52,15 @@
         <div class="row d-flex justify-content-center">
 
             <!-- Grid column -->
-            <div>
+            <div class="col-xl-7 pb-2">
 
-                <p class="card-text">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">UPS</li>
-                    <li class="list-group-item">Colissimo</li>
-                    <li class="list-group-item">DPD</li>
-                    <li class="list-group-item">Fedex</li>
-                </ul>
-                </p>
+                <p class="card-text">Nos produits sont livrés par les entreprises suivantes : UPS, Colissimo, DPD et Fedex.</p>
 
             </div>
             <!-- Grid column -->
 
         </div>
+        <!-- Grid row -->
 
         <hr class="my-4 rgba-white-light">
 
