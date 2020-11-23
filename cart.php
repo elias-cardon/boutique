@@ -49,7 +49,7 @@
 								<th width="15%">Prix</th>
 								<th width="25%">Quantité</th>
 								<th width="20%">Prix total HT</th>
-								<th width="10%">Action</th>
+								<th width="10%">Supprimer</th>
 							</tr>
 					    <?php
 							$getProd = $ct->getCartProduct();
@@ -68,7 +68,7 @@
 					<form action="" method="post">
 						<input type="hidden" name="cartid" value="<?php echo $cartpd['cartId'];?>"/>
 						<input type="number" name="pdquantity" value="<?php echo $cartpd['quantity'];?>"/>
-						<input type="submit" name="submit" value="Update"/>
+						<input type="submit" name="submit" value="Changer"/>
 					</form>
 								</td>
 								<td><?php
