@@ -28,7 +28,7 @@
 					 <a href="details.php?pdid=<?php echo $rows['pid'];?>"><img src="admin/<?php echo $rows['image'];?>" alt="" /></a>
 					 <h2><?php echo $rows['productName'];?></h2>
 					 <p><?php echo $fm->textShorten($rows['body'],60);?></p>
-					 <p><span class="price">$ <?php echo $rows['price'];?></span></p>
+					 <p><span class="price">€ <?php echo $rows['price'];?></span></p>
 				     <div class="button"><span><a href="details.php?pdid=<?php echo $rows['pid'];?>" class="details">Details</a></span></div>
 				</div>
 			<?php
