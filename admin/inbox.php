@@ -37,8 +37,8 @@
 					<thead>
 						<tr>
 							<th>Id</th>
-							<th>Temps</th>
-							<th>CsId</th>
+							<th>Date</th>
+							<th>Id du client</th>
 							<th>Produit</th>
 							<th>Quantité</th>
 							<th>Prix</th>
@@ -60,7 +60,7 @@
 					<td><?php echo $rows['csId'];?></td>
 					<td><?php echo $rows['productName'];?></td>
 					<td><?php echo $rows['quantity'];?></td>
-					<td>$ <?php echo $rows['price'];?></td>
+					<td><?php echo $rows['price'];?> €</td>
 					<td><a href="customer.php?csid=<?php echo $rows['csId'];?>">View Details</a></td>
 						<?php 
 							if ($rows['status'] == 0) {
