@@ -10,9 +10,10 @@
       <h3>Explore</h3>
         <ul>
           <li><a href="index.php">Accueil</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Capabilities</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="propos.php">A propos de nous</a></li>
+          <li><a href="engagement.php">Engagements</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
     </section>
           
@@ -24,9 +25,7 @@
         <p>Irvine, Ca, USA 92618</p>
         </a>
             
-      <h3 class="desktop">New Business</h3>
-        <p class="desktop"><a href="#">engage@weareenvoy.com</a></p>
-        <p class="desktop"><a href="#">949.333.3106</a></p>
+      
     </section>
             
     <section class="footer-item">
@@ -47,8 +46,8 @@
     <section class="footer-item">
       <h3>Legal</h3>
         <ul>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
+          <li><a href="CGU.php">CGU</a></li>
+          <li><a href="livraison.php">Livraison</a></li>
         </ul>
     </section>
   </nav>
