@@ -7,9 +7,8 @@
     </section>
         
     <section class="footer-item">
-      <h3>Explore</h3>
+      <h3>Nous, c'est le vous</h3>
         <ul>
-          <li><a href="index.php">Accueil</a></li>
           <li><a href="propos.php">A propos de nous</a></li>
           <li><a href="engagement.php">Engagements</a></li>
           <li><a href="faq.php">FAQ</a></li>
@@ -18,33 +17,32 @@
     </section>
           
     <section class="footer-item">
-      <h3>Visit</h3>
+      <h3>Rendez-nous visite</h3>
         <a href="#">
-        <p>Envoy So. California</p>
-        <p>34 Tesla, Ste 100</p>
-        <p>Irvine, Ca, USA 92618</p>
+        <p>8 rue d'Hozier</p>
+        <p>13002 Marseille</p>
         </a>
             
       
     </section>
             
     <section class="footer-item">
-      <h3>New Business</h3>
-        <p><a href="#">Email us</a></p>
-        <p><a href="#">949.333.3106</a></p>
+      <h3>Contactez-nous</h3>
+        <p><a href="#">+33 1 23 45 56 67</a></p>
     </section>
         
     <section class="footer-item">
-      <h3>Follow</h3>
+      <h3>Réseaux sociaux</h3>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/?hl=fr">Instagram</a></li>
+          <li><a href="https://twitter.com/?lang=fr">Twitter</a></li>
+          <li><a href="https://fr.linkedin.com/">LinkedIn</a></li>
+            <li><a href="https://fr-fr.facebook.com/">Facebook</a></li>
         </ul>
     </section>
         
     <section class="footer-item">
-      <h3>Legal</h3>
+      <h3>Légal</h3>
         <ul>
           <li><a href="CGU.php">CGU</a></li>
           <li><a href="livraison.php">Livraison</a></li>
