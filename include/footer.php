@@ -98,7 +98,7 @@
     position: absolute;
     top: 45px;
     right: 13px;
-    background-color: white;
+    /*background-color: white;*/
     height: 1px;
     width: 86px;
     transition: .6s;
@@ -106,7 +106,7 @@
   
 .footer-button:hover {
     color: black;
-    background-color: white;
+    /*background-color: white;*/
 }
   
 .footer-button:hover:after {
@@ -185,7 +185,7 @@ a:hover {
 }
 
 .footer-inner:after {
-    content: "© 2020 Envoy. All Rights Reserved.";
+    content: "© 2020 La Bonne Planque. Tout droit réservé.";
     font-weight: 300;
     letter-spacing: 0.03em;
     font-size: 13px;

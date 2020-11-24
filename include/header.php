@@ -148,3 +148,46 @@
 	  <div class="clear"></div>
 	</ul>
 </div>
+<style>
+	.shopping_cart{
+	float:left;
+	/*width: 202px;*/
+	position:relative;
+	margin-left:15px;
+	padding: 0 0 0 46px;
+	background: url(../images/header_cart.png) 0 0 no-repeat;
+	z-index: 99;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor:pointer;
+}
+	.cart{
+	height: 38px;
+	width : 10em;
+	padding: 0 0 0 10px;
+	background: #EDEDED;
+	border: 1px solid #CECECE;
+	border-left: none;
+	line-height: 36px;
+	-webkit-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.login {
+	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
+	border: 1px solid #cecece;
+	box-sizing: border-box;
+	color: #444;
+	display: block;
+	float: left;
+	font-size: 27px;
+	height: 38px;
+	margin-left: 10px;
+	text-align: center;
+	width: 7em;
+}
+</style>
