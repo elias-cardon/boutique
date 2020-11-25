@@ -20,7 +20,7 @@
 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Customer Details</h2>
+                <h2>Détails du client</h2>
                <div class="block copyblock"> 
                     <?php
                         if (isset($updateCat)) {
@@ -73,7 +73,7 @@
                     <?php  } } ?>
 						<tr> 
                             <td>
-                              <button>  <a href="inbox.php">Back to inbox</a> </button>
+                              <button>  <a href="inbox.php">Retour à la boîte de réception</a> </button>
                             </td>
                         </tr>
                     </table>

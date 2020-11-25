@@ -61,7 +61,7 @@
 					<td><?php echo $rows['productName'];?></td>
 					<td><?php echo $rows['quantity'];?></td>
 					<td><?php echo $rows['price'];?> €</td>
-					<td><a href="customer.php?csid=<?php echo $rows['csId'];?>">View Details</a></td>
+					<td><a href="customer.php?csid=<?php echo $rows['csId'];?>">Voir les détails</a></td>
 						<?php 
 							if ($rows['status'] == 0) {
 						?>

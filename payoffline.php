@@ -71,7 +71,7 @@
 							<tr>
 								<td><?php echo $i?></td>
 								<td><?php echo $cartpd['productName'];?></td>
-								<td>$ <?php echo $cartpd['price'];?></td>
+								<td><?php echo $cartpd['price'];?> €</td>
 								<td><?php echo $cartpd['quantity'];?></td>
 								<td><?php
 								 $sp = $cartpd['price'];
@@ -79,7 +79,7 @@
 								 $total = $sp*$qn;
 								 echo $total;
 
-								 ?></td>
+								 ?> €</td>
 							</tr>	
 							<?php
 							 $sum = $total+$sum;
