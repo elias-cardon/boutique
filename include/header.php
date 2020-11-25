@@ -28,7 +28,7 @@
 
 <!DOCTYPE HTML>
 <head>
-<title>Store Website</title>
+<title>La Bonne Planque</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="src/css/style.css" rel="stylesheet" type="text/css" media="all"/>
@@ -67,7 +67,7 @@
 			    </div> -->
 			    <div class="shopping_cart">
 					<div class="cart">
-						<a href="cart.php" title="View my shopping cart" rel="nofollow">
+						<a href="cart.php" title="Voir le panier" rel="nofollow">
 								<span class="cart_title">Panier</span>
 								<span class="no_product">
 									<?php
@@ -75,7 +75,7 @@
 									if ($getData) {
 										$sum = Session::get("cart");
 										$qty = Session::get("qty");
-											echo "$ ".$sum." ~ Qty: ".$qty;
+											echo "Qté: " .$qty. " ~ ".$sum." €";
 									}else{
 										echo "(Vide)";
 									}
@@ -100,7 +100,7 @@
 			<a href="?csid=<?php echo Session::get('csid'); ?>">Déconnexion</a>
 
 		<?php }else{  ?>
-			<a href="login.php">Connexion</a>
+			<a href="login.php" title="Pour se connecter">Connexion</a>
 	   <?php } ?>
 		   
 		   </div>
@@ -115,36 +115,79 @@
 	   <?php
 	  	$ckCompare = $pd->checkCompareData(Session::get('csid'));
 	 	if ($ckCompare) { ?>
-		    <li><a href="compare.php">Comparaison</a></li>
+		    <li><a href="compare.php" title="Pour comparer">Comparaison</a></li>
 	 	<?php } ?>
 
 	 	 <?php
 	  	$ckwlist = $pd->checkWishlistData(Session::get('csid'));
 	 	if ($ckwlist) { ?>
-		    <li><a href="wishlist.php">Wishlist</a></li>
+		    <li><a href="wishlist.php" title="Voir la wishlist">Wishlist</a></li>
 	 	<?php } ?>
 
 	 	<?php 
 	 	$chkCart = $ct->checkCartTable();
 	 	if ($chkCart) { ?>
 	 		<li><a href="cart.php">Panier</a></li>
-	 		<li><a href="payment.php">Paiement</a></li>
+	 		<li><a href="payment.php" title="Pour payer">Paiement</a></li>
 	 	<?php } ?>
 	  
 	  <?php 
 	  	$csid = Session::get('csid');
 	 	$ckorder = $csmr->checkOrder($csid);
 	 	if ($ckorder) { ?>
-	 		<li><a href="orderdetails.php">Commande</a></li>
+	 		<li><a href="orderdetails.php" title="Voir les commandes">Commandes</a></li>
 	 	<?php } ?>
 
 	  <?php
 	  	$userlogin = Session::get('cslogin');
 	  	if ($userlogin == true) { ?>
-	  	<li><a href="profile.php">Profil</a></li>
+	  	<li><a href="profile.php" title="Voir le profil">Profil</a></li>
 	  <?php	} ?>
 	  
-	  <li><a href="contact.php">Contact</a> </li>
+	  <li><a href="contact.php" title="Pour nous contacter">Contact</a> </li>
 	  <div class="clear"></div>
 	</ul>
 </div>
+<style>
+	.shopping_cart{
+	float:left;
+	/*width: 202px;*/
+	position:relative;
+	margin-left:15px;
+	padding: 0 0 0 46px;
+	background: url(../images/header_cart.png) 0 0 no-repeat;
+	z-index: 99;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor:pointer;
+}
+	.cart{
+	height: 38px;
+	width : 10em;
+	padding: 0 0 0 10px;
+	background: #EDEDED;
+	border: 1px solid #CECECE;
+	border-left: none;
+	line-height: 36px;
+	-webkit-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.login {
+	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
+	border: 1px solid #cecece;
+	box-sizing: border-box;
+	color: #444;
+	display: block;
+	float: left;
+	font-size: 27px;
+	height: 38px;
+	margin-left: 10px;
+	text-align: center;
+	width: 7em;
+}
+</style>

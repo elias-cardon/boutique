@@ -49,7 +49,7 @@ Session::checkSession();
                    <!--  <img src="img/lol.png" alt="Logo" /> -->
 				</div>
 				<div class="floatleft middle">
-					<h1>Le Bazaaar</h1>
+					<h1>La Bonne Planque</h1>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">

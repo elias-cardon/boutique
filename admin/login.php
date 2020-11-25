@@ -41,7 +41,7 @@ include "../classes/Adminlogin.php";
 			</div>
 		</form><!-- form -->
 		<div class="button">
-			<a href="#">Le Bazaaar</a>
+			<a href="#">La Bonne Planque</a>
 		</div><!-- button -->
 	</section><!-- content -->
 </div><!-- container -->
