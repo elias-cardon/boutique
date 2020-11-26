@@ -52,13 +52,13 @@
 					<td><img width="50" height="50" src="<?php echo $row['image'];?>" alt="<?php echo $row['productName'];?>"></td>
 					<td class="center"><?php
 							if ($row['type'] == 1) {
-								echo "Featured";
+								echo "Produits Phares";
 							}else{
 								echo "General";
 							}
 						?>
 					</td>
-					<td><a href="productedit.php?prodid=<?php echo $row['pid']; ?>">Editer</a> || <a href="?delpd=<?php echo $row['pid'];?>" onclick="return confirm('Confirmatin suppression');">Supprimer</a></td>
+					<td><a href="productedit.php?prodid=<?php echo $row['pid']; ?>">Editer</a> || <a href="?delpd=<?php echo $row['pid'];?>" onclick="return confirm('Confirmation suppression');">Supprimer</a></td>
 				</tr>
 				<?php
 						}
