@@ -81,7 +81,7 @@ class Customer
 				Session::set("cslogin",true);
 				Session::set("csid",$value['csId']);
 				Session::set("csname",$value['name']);
-				header("Location: cart.php");
+				header("Location: profile.php");
 			}else{
 				$msg = "<span class='error'>L'email ou le mot de passe ne correspond pas !</span>";
 				return $msg;
