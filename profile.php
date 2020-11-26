@@ -61,7 +61,7 @@
 					<td>:</td>
 					<td><?php echo $row['phone'];?></td>
 				</tr>
-				<tr><td colspan='3'><h2 style="text-align:center"><button ><a href="editprofile.php">Edit profile</a></button></h2></td></tr>
+				<tr><td colspan='3'><h2 style="text-align:center"><button ><a href="editprofile.php">Modifier profil</a></button></h2></td></tr>
 			</table>
 
 			<?php } }?>

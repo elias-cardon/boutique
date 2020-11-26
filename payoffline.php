@@ -40,7 +40,7 @@
 	color: #fff;
 	font-size: 20px;
 	background: green;
-	width: 100px;
+	width: 200px;
 	margin: 0 auto;
 	border-radius: 5px;
 }
