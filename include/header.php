@@ -1,21 +1,21 @@
 <?php 
-	include "libs/session.php";
-	Session::init();
-	$filepath = realpath(dirname(__FILE__));
-	include_once ($filepath."/../libs/Database.php");
-	include_once ($filepath."/../helpers/Format.php");
+    include "libs/session.php";
+    Session::init();
+    $filepath = realpath(dirname(__FILE__));
+    include_once ($filepath."/../libs/Database.php");
+    include_once ($filepath."/../helpers/Format.php");
 
-	spl_autoload_register(function($class){
-		include_once "classes/".$class.".php";
-	});
+    spl_autoload_register(function($class){
+        include_once "classes/".$class.".php";
+    });
 
-	//creating object of classes
-	$db = new Database();
-	$fm = new Format();
-	$pd = new Product();
-	$ct = new Cart();
-	$cat= new Category();
-	$csmr = new Customer();
+    //creating object of classes
+    $db = new Database();
+    $fm = new Format();
+    $pd = new Product();
+    $ct = new Cart();
+    $cat= new Category();
+    $csmr = new Customer();
 ?>
 
 <?php
@@ -50,170 +50,144 @@
 </head>
 <body>
   <div class="wrap">
-		<div class="header_top">
-			<div class="logo">
-				<ul>
-					
-					<li>
-						<h3>La Bonne Planque</h3>
-					</li>
-				</ul>
-			</div>
-			  <div class="header_top_right">
-			   <!--  <div class="search_box">
-				    <form>
-				    	<input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
-				    </form>
-			    </div> -->
-			    <div class="shopping_cart">
-					<div class="cart">
-						<a href="cart.php" title="Voir le panier" rel="nofollow">
-								<span class="cart_title">Panier</span>
-								<span class="no_product">
-									<?php
-									$getData = $ct->checkCartTable();
-									if ($getData) {
-										$sum = Session::get("cart");
-										$qty = Session::get("qty");
-											echo "Qté: " .$qty. " ~ ".$sum." €";
-									}else{
-										echo "(Vide)";
-									}
-										
-									?>
-								</span>
-							</a>
-						</div>
-			      </div>
-	<?php
-		if (isset($_GET['csid'])) {
-			$delCart = $ct->delCustomerCart();
-			$delCompare = $pd->delCustomerCompare(Session::get('csid'));
-			Session::destroy();
-		}
-	?>
-		   <div class="login">
-		<?php
-			$login = Session::get('cslogin');
-			if ($login == true) {
-		?>
-			<a href="?csid=<?php echo Session::get('csid'); ?>">Déconnexion</a>
+        <div class="header_top">
+            <div class="logo">
+                <ul>
+                    
+                    <li>
+                        <h3>La Bonne Planque</h3>
+                    </li>
+                </ul>
+            </div>
+              <div class="header_top_right">
+               <!--  <div class="search_box">
+                    <form>
+                        <input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
+                    </form>
+                </div> -->
+                <div class="shopping_cart">
+                    <div class="cart">
+                        <a href="cart.php" title="Voir le panier" rel="nofollow">
+                                <span class="cart_title">Panier</span>
+                                <span class="no_product">
+                                    <?php
+                                    $getData = $ct->checkCartTable();
+                                    if ($getData) {
+                                        $sum = Session::get("cart");
+                                        $qty = Session::get("qty");
+                                            echo "Qté: " .$qty. " ~ ".$sum." €";
+                                    }else{
+                                        echo "(Vide)";
+                                    }
+                                        
+                                    ?>
+                                </span>
+                            </a>
+                        </div>
+                  </div>
+    <?php
+        if (isset($_GET['csid'])) {
+            $delCart = $ct->delCustomerCart();
+            $delCompare = $pd->delCustomerCompare(Session::get('csid'));
+            Session::destroy();
+        }
+    ?>
+           <div class="login">
+        <?php
+            $login = Session::get('cslogin');
+            if ($login == true) {
+        ?>
+            <a href="?csid=<?php echo Session::get('csid'); ?>">Déconnexion</a>
 
-		<?php }else{  ?>
-			<a href="login.php" title="Pour se connecter">Connexion</a>
-	   <?php } ?>
-		   
-		   </div>
-		 <div class="clear"></div>
-	 </div>
-	 <div class="clear"></div>
+        <?php }else{  ?>
+            <a href="login.php" title="Pour se connecter">Connexion</a>
+       <?php } ?>
+           
+           </div>
+         <div class="clear"></div>
+     </div>
+     <div class="clear"></div>
  </div>
 <div class="menu">
-	<ul id="dc_mega-menu-orange" class="dc_mm-orange">
-	  <li><a href="index.php">Accueil</a></li>
-	 <!--  <li><a href="topbrands.php">Top Brands</a></li> -->
-	   <?php
-	  	$ckCompare = $pd->checkCompareData(Session::get('csid'));
-	 	if ($ckCompare) { ?>
-		    <li><a href="compare.php" title="Pour comparer">Comparaison</a></li>
-	 	<?php } ?>
+    <ul id="dc_mega-menu-orange" class="dc_mm-orange">
+      <li><a href="index.php">Accueil</a></li>
+     <!--  <li><a href="topbrands.php">Top Brands</a></li> -->
+       <?php
+        $ckCompare = $pd->checkCompareData(Session::get('csid'));
+        if ($ckCompare) { ?>
+            <li><a href="compare.php" title="Pour comparer">Comparaison</a></li>
+        <?php } ?>
 
-<<<<<<< HEAD
-            <?php
-            $userlogin = Session::get('cslogin');
-            if ($userlogin == true) { ?>
-                <li><a href="profile.php" title="Voir le profil">Profil</a></li>
-            <?php } ?>
-            <li><a href="contact.php" title="Pour nous contacter">Contact</a></li>
-            <div class="clear"></div>
-        </ul>
-    </div>
-    <style>
-        .shopping_cart {
-            float: left;
-            /*width: 202px;*/
-            position: relative;
-            margin-left: 15px;
-            padding: 0 0 0 46px;
-            background: url(../images/header_cart.png) 0 0 no-repeat;
-            z-index: 99;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-=======
-	 	 <?php
-	  	$ckwlist = $pd->checkWishlistData(Session::get('csid'));
-	 	if ($ckwlist) { ?>
-		    <li><a href="wishlist.php" title="Voir la wishlist">Wishlist</a></li>
-	 	<?php } ?>
+         <?php
+        $ckwlist = $pd->checkWishlistData(Session::get('csid'));
+        if ($ckwlist) { ?>
+            <li><a href="wishlist.php" title="Voir la wishlist">Wishlist</a></li>
+        <?php } ?>
 
-	 	<?php 
-	 	$chkCart = $ct->checkCartTable();
-	 	if ($chkCart) { ?>
-	 		<li><a href="cart.php">Panier</a></li>
-	 		<li><a href="payment.php" title="Pour payer">Paiement</a></li>
-	 	<?php } ?>
-	  
-	  <?php 
-	  	$csid = Session::get('csid');
-	 	$ckorder = $csmr->checkOrder($csid);
-	 	if ($ckorder) { ?>
-	 		<li><a href="orderdetails.php" title="Voir les commandes">Commandes</a></li>
-	 	<?php } ?>
->>>>>>> parent of eff28eb... MàJ
+        <?php 
+        $chkCart = $ct->checkCartTable();
+        if ($chkCart) { ?>
+            <li><a href="cart.php">Panier</a></li>
+            <li><a href="payment.php" title="Pour payer">Paiement</a></li>
+        <?php } ?>
+      
+      <?php 
+        $csid = Session::get('csid');
+        $ckorder = $csmr->checkOrder($csid);
+        if ($ckorder) { ?>
+            <li><a href="orderdetails.php" title="Voir les commandes">Commandes</a></li>
+        <?php } ?>
 
-	  <?php
-	  	$userlogin = Session::get('cslogin');
-	  	if ($userlogin == true) { ?>
-	  	<li><a href="profile.php" title="Voir le profil">Profil</a></li>
-	  <?php	} ?>
-	  
-	  <li><a href="contact.php" title="Pour nous contacter">Contact</a> </li>
-	  <div class="clear"></div>
-	</ul>
+      <?php
+        $userlogin = Session::get('cslogin');
+        if ($userlogin == true) { ?>
+        <li><a href="profile.php" title="Voir le profil">Profil</a></li>
+      <?php } ?>
+      
+      <li><a href="contact.php" title="Pour nous contacter">Contact</a> </li>
+      <div class="clear"></div>
+    </ul>
 </div>
 <style>
-	.shopping_cart{
-	float:left;
-	/*width: 202px;*/
-	position:relative;
-	margin-left:15px;
-	padding: 0 0 0 46px;
-	background: url(../images/header_cart.png) 0 0 no-repeat;
-	z-index: 99;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	cursor:pointer;
+    .shopping_cart{
+    float:left;
+    /*width: 202px;*/
+    position:relative;
+    margin-left:15px;
+    padding: 0 0 0 46px;
+    background: url(../images/header_cart.png) 0 0 no-repeat;
+    z-index: 99;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor:pointer;
 }
-	.cart{
-	height: 38px;
-	width : 10em;
-	padding: 0 0 0 10px;
-	background: #EDEDED;
-	border: 1px solid #CECECE;
-	border-left: none;
-	line-height: 36px;
-	-webkit-border-radius: 0 2px 2px 0;
-	border-radius: 0 2px 2px 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    .cart{
+    height: 38px;
+    width : 10em;
+    padding: 0 0 0 10px;
+    background: #EDEDED;
+    border: 1px solid #CECECE;
+    border-left: none;
+    line-height: 36px;
+    -webkit-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .login {
-	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
-	border: 1px solid #cecece;
-	box-sizing: border-box;
-	color: #444;
-	display: block;
-	float: left;
-	font-size: 27px;
-	height: 38px;
-	margin-left: 10px;
-	text-align: center;
-	width: 7em;
+    background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
+    border: 1px solid #cecece;
+    box-sizing: border-box;
+    color: #444;
+    display: block;
+    float: left;
+    font-size: 27px;
+    height: 38px;
+    margin-left: 10px;
+    text-align: center;
+    width: 7em;
 }
 </style>
