@@ -143,7 +143,6 @@ header("Cache-Control: max-age=2592000");
             if ($userlogin == true) { ?>
                 <li><a href="profile.php" title="Voir le profil">Profil</a></li>
             <?php } ?>
-
             <li><a href="contact.php" title="Pour nous contacter">Contact</a></li>
             <div class="clear"></div>
         </ul>
