@@ -1,248 +1,126 @@
-<footer>
-  <nav class="footer-inner">
-    <section class="footer-item">
-      <h1>La Bonne Planque</h1>
-      
-      <h2>Nous créons des possibilités <br>pour le monde connecté.<br><b class="color">Soyez audacieux.</b></h2>
-    </section>
-        
-    <section class="footer-item">
-      <h3>Nous, c'est le vous</h3>
-        <ul>
-          <li><a href="propos.php">A propos de nous</a></li>
-          <li><a href="engagement.php">Engagements</a></li>
-          <li><a href="faq.php">FAQ</a></li>
-          <li><a href="contact.php">Contact</a></li>
-        </ul>
-    </section>
-          
-    <section class="footer-item">
-      <h3>Rendez-nous visite</h3>
-        <a href="#">
-        <p>8 rue d'Hozier</p>
-        <p>13002 Marseille</p>
-        </a>
-            
-      
-    </section>
-            
-    <section class="footer-item">
-      <h3>Contactez-nous</h3>
-        <p><a href="#">+33 1 23 45 56 67</a></p>
-    </section>
-        
-    <section class="footer-item">
-      <h3>Réseaux sociaux</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/?hl=fr">Instagram</a></li>
-          <li><a href="https://twitter.com/?lang=fr">Twitter</a></li>
-          <li><a href="https://fr.linkedin.com/">LinkedIn</a></li>
-            <li><a href="https://fr-fr.facebook.com/">Facebook</a></li>
-        </ul>
-    </section>
-        
-    <section class="footer-item">
-      <h3>Légal</h3>
-        <ul>
-          <li><a href="CGU.php">CGU</a></li>
-          <li><a href="livraison.php">Livraison</a></li>
-        </ul>
-    </section>
-  </nav>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">La Bonne Planque</h6>
+        <p>Nous créons des possibilités
+pour le monde. Soyez audacieux.</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">A propos</h6>
+        <p>
+          <a href="propos.php">A propos de nous</a>
+        </p>
+        <p>
+          <a href="faq.php">FAQ</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Légal</h6>
+        <p>
+          <a href="CGU.php">CGU</a>
+        </p>
+        <p>
+          <a href="livraison.php">Livraison</a>
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <p>
+          <i class="fas fa-home mr-3"></i> 8 Rue d'hozier, 13002 Marseille</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@labonneplanque.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Footer links -->
+
+    <hr>
+
+    <!-- Grid row -->
+    <div class="row d-flex align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8">
+
+        <!--Copyright-->
+        <p class="text-center text-md-left">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/">
+            <strong> La Bonne Planque</strong>
+          </a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <!-- Social buttons -->
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
 </footer>
-
-<style>
-	footer {
-    background-color: black;
-    font-family: "Lato", sans-serif;
-    padding: 85px 0 285px 0;
-}
-
-.footer-inner {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 120px;
-    max-width: 1170px;
-    position: relative;
-}
-
-.footer-item {
-    float: left;
-    margin: 0 7.2% 0 0;
-}
-
-.footer-item:nth-of-type(4) {
-    display: none;
-}
-
-.footer-item:nth-of-type(7) {
-    float: right;
-    margin-right: 0;
-}
-
-.footer-button {
-    color: white;
-    position: relative;
-    font-weight: 400;
-    font-size: 16px;
-    transition: 1s;
-    transition-delay: .2s;
-    padding: 14px;
-}
-  
-.footer-button:after {
-    content: "";
-    position: absolute;
-    top: 45px;
-    right: 13px;
-    /*background-color: white;*/
-    height: 1px;
-    width: 86px;
-    transition: .6s;
-}
-  
-.footer-button:hover {
-    color: black;
-    /*background-color: white;*/
-}
-  
-.footer-button:hover:after {
-    width: 112px;
-    right: 0px;
-}
-
-h1 {
-    font-weight: 900;
-    color: white;
-    font-size: 24px;
-    letter-spacing: 2px;
-    margin: 0;
-    padding-bottom: 10px;
-}
-  
-h2 {
-    font-weight: 300;
-    line-height: 1.8;
-    font-size: 13px;
-    color: #d1d1d1;
-    letter-spacing: 0.03em;
-    padding: 15px 0 0 0;
-}
-  
-.color {
-    color: white;
-    font-weight: 400;
-}
-  
-h3 {
-    font-weight: 400;
-    font-size: 13px;
-    color: white;
-    margin: 0;
-    padding-bottom: 9px;
-    letter-spacing: 0.03em;
-}
-
-h3.desktop {
-    padding-top: 30px;
-}
-  
-ul {
-    line-height: 1.8;
-    list-style-type: none;
-    padding: 0;
-}
-  
-li {
-    font-weight: 300;
-    font-size: 13px;
-    color: #d1d1d1;
-    letter-spacing: 0.03em;
-}
-  
-p {
-    font-weight: 300;
-    font-size: 13px;
-    padding: 0;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-}
-  
-a {
-    text-decoration: none;
-    color: #d1d1d1;
-}
-  
-a:hover {
-    color: white;
-}
-  
-.desktop {
-    display: auto;
-}
-
-.footer-inner:after {
-    content: "© 2020 La Bonne Planque. Tout droit réservé.";
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    font-size: 13px;
-    color: #d1d1d1;
-    position: absolute;
-    top: 260px;
-    clear: both;
-    display: block;
-}
-
-@media (max-width: 1024px) {
-  
-footer {
-    padding: 50px 0 70px 0 !important;
-}
-
-.footer-inner {
-    border-bottom: 1px solid #333;
-    padding-bottom: 490px;
-    margin-bottom: 50px;
-}
-
-.footer-item {
-    margin: 0 0 42px 0;
-    width: 50%;
-}
-
-.footer-item:nth-of-type(1) {
-    border-bottom: 1px solid #333;
-    padding-bottom: 32px;
-    float: none;
-    width: 100%;
-}
-
-.footer-item:nth-of-type(2) {
-    clear: both;
-}
-
-.footer-item:nth-of-type(4) {
-    clear: both;
-    display: block;
-}
-
-.footer-item:nth-of-type(6) {
-    clear: both;
-}
-
-.footer-item:nth-of-type(7) {
-    clear: both;
-    float: left;
-    margin: 20px 0 0 -13px;
-}
-
-.desktop {
-    display: none;
-}
-
-.footer-inner:after {
-    top: 730px;
-}
-}
-</style>
+<!-- Footer -->
