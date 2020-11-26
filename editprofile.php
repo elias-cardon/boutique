@@ -72,7 +72,7 @@
 					
 				</tr>
 				<tr>
-					<td colspan='3'><input type="submit" name="update" value="Modifier Profil"></td>
+					<td colspan='3'><input type="submit" name="update" value="Update Profile"></td>
 				</tr>
 				<tr>
 					<td colspan='3'><h3>

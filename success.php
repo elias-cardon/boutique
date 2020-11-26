@@ -18,7 +18,7 @@
 	display: block;
 	padding: 50px;
 	width: 400px;
-	height: 200px;
+	height: 350px;
 	margin: 0 auto;
 	text-align: center;
 }

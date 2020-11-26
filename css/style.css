@@ -1,5 +1,5 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {display: block;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0;padding:0;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
@@ -671,7 +671,84 @@ button.grey:hover,.search button.grey:hover{
 .images_1_of_4 .button a.cart-button{
 	padding:7px 5px 7px 38px; 
 }
-/
+/*** Footer ***/
+.wrapper{	
+	width:78%;
+	margin:0 auto;
+	padding:0 1%;
+}
+.footer{
+	position:relative;
+	background: #414045; 
+	background: -moz-linear-gradient(top,  #414045 55%, #2f2e33 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(55%,#414045), color-stop(100%,#2f2e33));
+	background: -webkit-linear-gradient(top,  #414045 55%,#2f2e33 100%); 
+	background: -o-linear-gradient(top,  #414045 55%,#2f2e33 100%); 
+	background: -ms-linear-gradient(top,  #414045 55%,#2f2e33 100%); 
+	background: linear-gradient(to bottom,  #414045 55%,#2f2e33 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414045', endColorstr='#2f2e33',GradientType=0 );
+	box-shadow: inset 0px 1px 8px #222;
+}
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+	zoom:1;
+}
+.col_1_of_4{
+	display: block;
+	float:left;
+	margin: 0% 0 1% 1.6%;
+	border-right: 2px groove #555;
+}
+.col_1_of_4:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.col_1_of_4:last-child {
+	border:none;
+}
+.span_1_of_4 {
+	width: 20.5%;
+	padding:1.5%; 
+}
+.span_1_of_4  h4 {
+	color:#ccc;
+	margin-bottom: .5em;
+	font-size:1.2em;
+	line-height: 1.2;
+	font-family:'Doppio One', sans-serif;
+	font-weight : normal;
+	margin-top: 0px;
+	letter-spacing: -1px;
+	text-transform:uppercase;
+	border-bottom:1px solid #474747;
+	padding-bottom:0.5em;
+}
+.span_1_of_4  li a{
+	font-size:0.8125em;
+	padding:0.4em 0;
+	color:#979797;
+	font-family :Arial, Helvetica, sans-serif;
+	display:block;	 	 
+}
+.span_1_of_4  li a:hover,.span_1_of_4  li span:hover{
+	color:#BBB7B7;
+}
+.span_1_of_4  li span{
+	font-size:1.2em;
+	padding:0.2em 0;
+	color:#979797;
+	display:block;
+	cursor:pointer;
+}
 /*** Social Icons ***/
 .social-icons{
 	padding-top:8%;
@@ -2137,7 +2214,23 @@ table.tblone img {
 	.images_1_of_4 p span.strike,.images_1_of_4 p span.price {
 		font-size:2em;
 	}
-	
+	/*** Footer ***/
+	.wrapper{
+		width:90%;
+	}
+	.col_1_of_4{ 
+		margin: 1% 0 1% 0%;
+	}
+	.span_1_of_4 {
+		width:95%;
+		padding:0 2.5%;
+		border:none; 
+	}
+	.span_1_of_4 h4 {
+		font-size:1em;
+		letter-spacing: 0;
+		padding-top: 5px;
+	}
 	.social-icons{
 		padding-top:3%;
 	}
