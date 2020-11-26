@@ -27,8 +27,8 @@ include "../classes/Brand.php";
                     <table class="data display datatable" id="example">
 					<thead>
 						<tr>
-							<th>NDS</th>
-							<th>Marque nom</th>
+							<th>N°</th>
+							<th>Nom de la marque</th>
 							<th>Action</th>
 						</tr>
 					</thead>

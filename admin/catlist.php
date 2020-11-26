@@ -17,7 +17,7 @@ include "../classes/Category.php";
 ?>
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Categorie Liste</h2>
+                <h2>Liste des catégories</h2>
                 <?php
                 	if (isset($delCat)) {
                 		echo $delCat;
@@ -27,8 +27,8 @@ include "../classes/Category.php";
                     <table class="data display datatable" id="example">
 					<thead>
 						<tr>
-							<th>NDS</th>
-							<th>Nom Catégorie</th>
+							<th>N°</th>
+							<th>Nom de la catégorie</th>
 							<th>Action</th>
 						</tr>
 					</thead>

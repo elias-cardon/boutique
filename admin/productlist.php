@@ -27,12 +27,12 @@
 			<thead>
 				<tr>
 					<th>Nom du produit</th>
-					<th>Categorie</th>
+					<th>Catégorie</th>
 					<th>Marque</th>
 					<th>Description</th>
 					<th>Prix</th>
 					<th>Image</th>
-					<th>type</th>
+					<th>Type</th>
 					<th>Action</th>
 				</tr>
 			</thead>
