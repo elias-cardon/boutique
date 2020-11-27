@@ -84,7 +84,9 @@
 								</span>
 							</a>
 						</div>
-			      </div>
+				  </div>
+			
+
 	<?php
 		if (isset($_GET['csid'])) {
 			$delCart = $ct->delCustomerCart();
@@ -148,6 +150,7 @@
 	  <div class="clear"></div>
 	</ul>
 </div>
+
 <style>
 	.shopping_cart{
 	float:left;
