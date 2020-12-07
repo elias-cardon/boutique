@@ -54,7 +54,8 @@
             <!-- Grid column -->
             <div class="col-xl-7 pb-2">
 
-                <p class="card-text">Nos produits sont livrés par les entreprises suivantes : UPS, Colissimo, DPD et Fedex.</p>
+                <p class="card-text">Nos produits sont livrés par les entreprises suivantes : UPS, Colissimo, DPD et
+                    Fedex.</p>
 
             </div>
             <!-- Grid column -->
