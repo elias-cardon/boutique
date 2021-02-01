@@ -4,45 +4,53 @@ table.user {
     width: 100%;
     text-align: left;
     border-collapse: collapse;
-  }
-  table.user td, table.user th {
+}
+
+table.user td, table.user th {
     border: 3px solid #AAAAAA;
     padding: 3px 2px;
-  }
-  table.user tbody td {
+}
+
+table.user tbody td {
     font-size: 13px;
     font-weight: bold;
-  }
-  table.user tr:nth-child(even) {
+}
+
+table.user tr:nth-child(even) {
     background: #D0E4F5;
-  }
-  table.user thead {
+}
+
+table.user thead {
     background: #1C6EA4;
     background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
     background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
     background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
     border-bottom: 2px solid #444444;
-  }
-  table.user thead th {
+}
+
+table.user thead th {
     font-size: 15px;
     font-weight: bold;
     color: #FFFFFF;
     border-left: 2px solid #D0E4F5;
-  }
-  table.user thead th:first-child {
+}
+
+table.user thead th:first-child {
     border-left: none;
-  }
-  
-  table.user tfoot td {
+}
+
+table.user tfoot td {
     font-size: 14px;
-  }
-  table.user tfoot .links {
+}
+
+table.user tfoot .links {
     text-align: right;
-  }
-  table.user tfoot .links a{
+}
+
+table.user tfoot .links a {
     display: inline-block;
     background: #1C6EA4;
     color: #FFFFFF;
     padding: 2px 8px;
     border-radius: 5px;
-  }
+}
