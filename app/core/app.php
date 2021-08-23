@@ -6,11 +6,11 @@ Class App{
 
     public function __construct(){
         $url = $this->parseURL();
-        print_r($url);
+        show($url);
     }
 
     private function parseURL(){
-        $url = $_GET['url'];
-        return $url;
+        $url = isset($_GET['url']) ? $_GET['url'] : "Accueil";
+        return explode("/", filter_var(trim($url, "/"), FILTER_SANITIZE_URL));
     }
 }
